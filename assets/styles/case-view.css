@@ -1,0 +1,17 @@
+	.analitika-site .img-block img.mobile-img {
+		display: none;
+	}
+
+	@media screen and (max-width: 769px) {
+		.analitika-site .img-block img.mobile-img {
+			display: block;
+		}
+
+		.analitika-site .img-block .mobile-img~img {
+			display: none;
+		}
+
+		.analitika-site .img-block img {
+			display: block;
+		}
+	}

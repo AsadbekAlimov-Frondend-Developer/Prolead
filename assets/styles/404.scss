@@ -1,0 +1,128 @@
+.page404_section {
+	padding-top: 210px;
+	margin-bottom: 120px;
+
+	// 
+	@media screen and (max-width: 769px) {
+		padding-top: 120px;
+		margin-bottom: 60px;
+	}
+
+	// 
+	.page_title {
+		color: var(--Black, #151515);
+
+		/* 1920/H3 */
+		font-family: "PT Root UI";
+		font-size: 46px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 50.6px */
+		margin-bottom: 24px;
+
+		@media screen and (max-width: 1300px) {
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 32px;
+		}
+
+		@media screen and (max-width: 769px) {
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
+
+	// 
+	.page_description {
+		width: 792px;
+		color: var(--Black, #151515);
+
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 1300px) {
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+			text-align: center;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 24.7px */
+			letter-spacing: -0.38px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.to-home {
+		display: inline-flex;
+		height: 56px;
+		padding: 15px 28px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--Gray3, #F2F2F2);
+		color: var(--Black, #151515);
+		text-align: center;
+
+		/* 1920/tag */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 20.4px */
+		letter-spacing: 0.34px;
+		text-transform: uppercase;
+		margin-bottom: 120px;
+		transition: all .3s ease;
+
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
+
+		@media screen and (max-width: 1300px) {
+			height: 52px;
+			padding: 15px 24px;
+			font-size: 16px;
+		}
+
+		@media screen and (max-width: 769px) {
+			padding: 15px 28px;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+			margin-bottom: 60px;
+			display: flex;
+			justify-content: center;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

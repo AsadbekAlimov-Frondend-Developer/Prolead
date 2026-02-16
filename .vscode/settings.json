@@ -1,0 +1,84 @@
+{
+  "emmet.extensionsPath": ["~/AppData/Roaming/Code/User/emmet"],
+  "workbench.startupEditor": "none",
+  "editor.smoothScrolling": true,
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.renderControlCharacters": true,
+  "editor.tabSize": 2,
+  "files.defaultLanguage": "html",
+  "git.ignoreMissingGitWarning": true,
+  "editor.detectIndentation": false,
+  "editor.folding": true,
+  "editor.glyphMargin": false,
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": "on",
+  "terminal.integrated.fontSize": 16,
+  "editor.renderWhitespace": "boundary",
+  "editor.lineHeight": 23,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "security.workspace.trust.enabled": false,
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.insertSpaces": false,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "explorer.confirmDelete": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.svg": "default"
+  },
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "git.enableSmartCommit": true,
+  "explorer.confirmPasteNative": false
+}

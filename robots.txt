@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prolead1.netlify.app/sitemap.xml

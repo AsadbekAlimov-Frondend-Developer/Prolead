@@ -1,0 +1,930 @@
+// .paralax-block {}
+
+.main {
+	height: 930px; // Qat'iy height o'rniga min-height yaxshiroq
+	background: url('../imgs/erol-bg.png') no-repeat center center / cover;
+	position: sticky;
+	padding-bottom: 80px;
+	top: 0vh;
+
+	// Pastki gradient va blur qatlami
+	@media screen and (min-width: 768px) {
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 170px;
+			z-index: 1; // Contentdan pastda bo'lishi kerak
+			pointer-events: none; // Linklarni bosishga xalaqit bermasligi uchun
+		}
+
+		// Pastki gradient (Blur bilan)
+		&::after {
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%);
+			backdrop-filter: blur(2px); // Dizayndagi 10px blur
+			-webkit-backdrop-filter: blur(10px);
+		}
+
+		// Tepagi gradient (To'g'rilangan: background-color emas, background)
+		&::before {
+			top: 0;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%);
+			// Agar tepada ham blur bo'lsa:
+			backdrop-filter: blur(2px);
+		}
+	}
+
+
+	// Ichidagi barcha content gradient ustida ko'rinishi uchun
+	.container,
+	.header_container {
+		position: relative;
+		z-index: 2;
+	}
+
+	@media screen and (max-width: 1300px) {
+		height: 620px;
+		padding-bottom: 60px;
+
+		&::after {
+			height: 200px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		height: 640px;
+		background-image: url('../imgs/erol-mobileBg.png');
+		padding-bottom: 40px;
+		position: unset;
+
+		&::after {
+			height: 0;
+			backdrop-filter: blur(0); // Mobileda kuchli blur dizaynni buzishi mumkin
+		}
+	}
+
+
+	// ===
+	ul {
+		li {
+			a {
+				color: var(--White, #FFF);
+			}
+		}
+	}
+}
+
+
+
+.caseDetail-section {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: end;
+
+	// 
+	.categories {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		align-content: center;
+		gap: 4px;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+
+		// 
+
+
+		// 
+		.category_item {
+			position: relative;
+			display: flex;
+			padding: 4px 10px;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			border-radius: 5px;
+			background: var(--White, #FFF);
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+			color: var(--Black, #151515);
+
+			/* 1920/tag */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 20.4px */
+			letter-spacing: 0.34px;
+			text-transform: uppercase;
+
+			@media screen and (max-width: 1300px) {
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 120%;
+				letter-spacing: 0.32px;
+			}
+
+
+		}
+	}
+
+	.main-title {
+		color: #FFF;
+
+		br {
+			display: none;
+		}
+
+		@media screen and (max-width: 1300px) {
+			font-size: 96px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+
+			br {
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 769px) {
+			font-size: 45px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+		}
+
+	}
+}
+
+.detail-tabe {
+	background: var(--Gray3, #F2F2F2);
+	padding: 80px 0 83px 0;
+	margin-bottom: 120px;
+	position: sticky;
+	top: 5vh;
+
+	// 
+	@media screen and (max-width: 1300px) {
+		padding: 60px 0;
+		margin-bottom: 90px;
+	}
+
+	@media screen and (max-width: 769px) {
+		padding: 40px 0;
+		margin-bottom: 50px;
+	}
+
+	// 
+	&.nosticky {
+		position: unset;
+	}
+
+	// 
+	.table-title {
+		width: 1336px;
+		color: var(--Black, #151515);
+
+		/* 1920/phrases */
+		font-family: "PT Root UI";
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 61.6px */
+		text-indent: 195px;
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 1300px) {
+			text-indent: 100px;
+			width: 966px;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 60px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 330px;
+			text-indent: 44px;
+			margin-bottom: 40px;
+			font-size: 22px;
+			line-height: 115%;
+		}
+	}
+
+	.block {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		@media screen and (max-width: 769px) {
+			grid-template-columns: 110px 220px;
+
+		}
+	}
+
+
+
+	.row {
+		display: contents;
+	}
+
+	.cell {
+		padding: 12px 0;
+		border-bottom: 1px solid #D9D9D9;
+
+		color: var(--Black, #151515);
+
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		@media screen and (max-width: 1300px) {
+			font-size: 19px;
+			font-weight: 400;
+			line-height: 140%;
+			letter-spacing: -0.38px;
+		}
+
+		@media screen and (max-width: 769px) {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	.thead {
+		.cell {
+			font-weight: 700;
+			line-height: 130%;
+			border-bottom: 1px solid #151515;
+
+			// @media screen and (max-width: 1300px) {}
+
+			@media screen and (max-width: 769px) {
+				line-height: 120%;
+			}
+		}
+	}
+
+
+
+
+}
+
+
+.analitika-site {
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	// 
+	.title-block {
+		display: flex;
+		align-items: start;
+		gap: 296px;
+		margin-bottom: 120px;
+
+		// 
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 90px;
+			gap: 123px;
+		}
+
+		@media screen and (max-width: 769px) {
+			margin-bottom: 50px;
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		// 
+		.item-title {
+			width: 520px;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+
+			@media screen and (max-width: 1281px) {
+				margin-bottom: 90px;
+				width: 471px;
+				font-size: 46px;
+				font-weight: 700;
+				line-height: 110%;
+			}
+
+			@media screen and (max-width: 769px) {
+				margin-bottom: 0px;
+				width: 330px;
+				flex-direction: column;
+				gap: 24px;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 110%;
+			}
+		}
+
+		// 
+		.description-items {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		// 
+		.item-description {
+			width: 656px;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 21px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			letter-spacing: -0.42px;
+
+			@media screen and (max-width: 1281px) {
+				width: 471px;
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 26.6px */
+				letter-spacing: -0.38px;
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 330px;
+				font-size: 19px;
+				font-weight: 400;
+				line-height: 130%;
+				letter-spacing: -0.38px;
+			}
+		}
+
+		// 
+		.item_main-description {
+			width: 656px;
+			color: var(--Black, #151515);
+
+			/* 1920/text */
+			font-family: "PT Root UI";
+			font-size: 21px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 29.4px */
+			letter-spacing: -0.42px;
+			margin-bottom: 39px;
+
+			@media screen and (max-width: 1281px) {
+				width: 471px;
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				margin-bottom: 20px;
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 330px;
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+			}
+		}
+
+		// 
+
+
+		// 
+		.result-numbers {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			// 
+
+			@media screen and (max-width: 769px) {
+				gap: 12px;
+			}
+
+			// 
+			.result_item {
+				border-bottom: 1px solid var(--Gray2, #D9D9D9);
+				display: flex;
+				gap: 24px;
+				padding-bottom: 20px;
+
+				@media screen and (max-width: 1300px) {
+					gap: 8px;
+				}
+
+			}
+
+			.num {
+				width: 24px;
+				color: var(--Blue, #1458E4);
+
+				/* 1920/label */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%;
+				/* 16.8px */
+				letter-spacing: 0.28px;
+				text-transform: uppercase;
+				padding-top: 4px;
+
+				@media screen and (max-width: 1300px) {
+					font-size: 13px;
+					letter-spacing: 0.26px;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 18px;
+				}
+			}
+
+			.description {
+				width: 608px;
+				color: var(--Black, #151515);
+
+				/* 1920/text */
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 29.4px */
+				letter-spacing: -0.42px;
+
+				@media screen and (max-width: 1300px) {
+					width: 439px;
+					font-size: 19px;
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 304px;
+					font-size: 19px;
+					line-height: 130%;
+				}
+			}
+		}
+	}
+
+	.img-block {
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+		margin-bottom: 120px;
+
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 90px;
+			gap: 60px;
+		}
+
+		@media screen and (max-width: 769px) {
+			margin-bottom: 50px;
+			gap: 30px;
+		}
+
+		// 
+		.block {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			@media screen and (max-width: 769px) {
+				display: flex;
+				flex-direction: column;
+
+
+				.cell {
+					width: 330px;
+					padding-bottom: 20px;
+					margin-bottom: 20px;
+					padding-top: 0;
+					margin-top: 12px;
+
+					// 
+					&.mb-0 {
+						border: none;
+						padding-bottom: 0;
+					}
+				}
+
+				.thead {
+					border: none;
+					padding: 0 !important;
+					margin-top: 0 !important;
+					font-size: 24px !important;
+				}
+			}
+		}
+
+
+
+		.row {
+			display: contents;
+		}
+
+		.cell {
+			padding: 12px 0;
+			border-bottom: 1px solid #D9D9D9;
+
+			color: var(--Black, #151515);
+
+			/* 1920/text */
+			font-family: "PT Root UI";
+			font-size: 21px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 29.4px */
+			letter-spacing: -0.42px;
+
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+
+			@media screen and (max-width: 1300px) {
+				font-size: 19px;
+				font-weight: 400;
+				line-height: 140%;
+				letter-spacing: -0.38px;
+			}
+
+			@media screen and (max-width: 769px) {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+			}
+
+			&.thead {
+				color: var(--Black, #151515);
+
+				/* 1920/H4 */
+				font-family: "PT Root UI";
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 31.2px */
+			}
+
+			span {
+				display: block;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				margin-bottom: 20px;
+
+				// 
+
+				@media screen and (max-width: 769px) {
+					margin-left: 15px;
+					margin-top: 4px !important;
+				}
+
+				// 
+				li {
+					list-style: disc;
+					font-family: "PT Root UI";
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 140%;
+
+					// 
+					@media screen and (max-width: 1300px) {
+						font-size: 16px;
+						font-weight: 400;
+					}
+
+
+
+					// 
+					&::marker {
+						font-size: 15px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+
+
+
+		// 
+		.img-title {
+			width: 1336px;
+			text-indent: 195px;
+
+			color: var(--Black, #151515);
+			/* 1920/phrases */
+			font-family: "PT Root UI";
+			font-size: 56px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+
+			span {
+				color: var(--Blue, #1458E4);
+
+				/* 1920/phrases */
+				font-family: "PT Root UI";
+				font-size: 56px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 110%;
+			}
+
+			@media screen and (max-width: 1300px) {
+				text-indent: 100px;
+				width: 966px;
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 110%;
+
+				span {
+					font-size: 40px;
+					font-weight: 700;
+					line-height: 110%;
+				}
+			}
+
+
+			@media screen and (max-width: 769px) {
+				width: 330px;
+				text-indent: 44px;
+				font-size: 22px;
+				line-height: 115%;
+
+				span {
+					font-size: 22px;
+					line-height: 115%;
+				}
+			}
+
+		}
+
+		img {
+			height: 905px;
+			border-radius: 10px;
+			object-fit: cover;
+			border-radius: 10px;
+
+			&.mobile-img {
+				display: none;
+			}
+
+			@media screen and (max-width: 1281px) {
+				height: 655px;
+			}
+
+			@media screen and (max-width: 769px) {
+				height: 270px;
+				display: none;
+
+				&.mobile-img {
+					display: block;
+				}
+			}
+		}
+
+	}
+
+	.editing_tableBlock {
+		.cell {
+			&.thead {
+				color: var(--Black, #151515);
+
+				/* 1920/H4 */
+				font-family: "PT Root UI";
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+
+				/* 31.2px */
+				@media screen and (max-width: 1281px) {
+					color: var(--Black, #151515);
+
+					/* 1280/H4 */
+					font-family: "PT Root UI";
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					/* 28.8px */
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Black, #151515);
+
+					/* 360/H4 */
+					font-family: "PT Root UI";
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					/* 28.8px */
+					margin-bottom: 12px !important;
+				}
+			}
+
+			color: var(--Black, #151515);
+
+			/* 1920/text sml */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+
+			/* 23.8px */
+			@media screen and (max-width: 1281px) {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+			}
+
+			@media screen and (max-width: 769px) {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+			}
+		}
+	}
+
+	.double-imgBlock {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		gap: 24px;
+		margin-top: 80px;
+		margin-bottom: 120px;
+
+		@media screen and (max-width: 1281px) {
+			margin-top: 60px;
+			margin-bottom: 90px;
+		}
+
+		@media screen and (max-width: 769px) {
+			flex-direction: column;
+			gap: 15px;
+			margin-bottom: 50px;
+			margin-top: 30px;
+		}
+
+		img {
+			width: 520px;
+			height: 650px;
+			border-radius: 10px;
+
+			@media screen and (max-width: 1281px) {
+				width: 371px;
+				height: 464px;
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 100%;
+				height: 413px;
+			}
+
+		}
+	}
+}
+
+.next-project {
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	.section-title {
+		color: var(--Black, #151515);
+		text-align: center;
+		font-family: "PT Root UI";
+		font-size: 46px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 40px;
+
+		@media screen and (max-width: 1281px) {
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 32px;
+		}
+
+		@media screen and (max-width: 769px) {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			margin-bottom: 24px;
+		}
+	}
+
+	.project-block {
+		width: 100%;
+		height: 930px;
+		background-image: url(../imgs/big-start-desktop.webp);
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		display: flex;
+		// 
+		align-items: center;
+		justify-content: center;
+		color: var(--White, #FFF);
+		text-align: center;
+
+		/* 1920/H2 */
+		font-family: "PT Root UI";
+		font-size: 88px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+
+		br {
+			display: none;
+		}
+
+		/* 96.8px */
+		@media screen and (max-width: 1300px) {
+			height: 618px;
+			font-size: 72px;
+			font-weight: 700;
+			line-height: 110%;
+
+			br {
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 769px) {
+			background-image: url(../imgs/big-start-mobile.webp);
+			height: 360px;
+			background-position: center;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+			align-items: start;
+			padding: 0;
+
+			.overlay-block {
+				width: 100%;
+				height: 100%;
+				background: #00000066;
+				display: flex;
+				justify-content: center;
+				padding: 120px 0 160px 0;
+			}
+		}
+	}
+
+}

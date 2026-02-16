@@ -1,0 +1,142 @@
+	.main {
+		background-image: url(assets/imgs/case_elfort-main-bg-img.webp);
+	}
+
+	@media screen and (max-width: 769px) {
+		.main {
+			background-image: url(assets/imgs/case_elfort-main-bg-imgMobile.webp);
+		}
+	}
+
+	.top-line {
+		width: 100% !important;
+		margin-bottom: 60px;
+		margin-top: 60px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.top-line {
+			margin-bottom: 40px;
+			margin-top: 40px;
+		}
+	}
+
+	@media screen and (max-width: 1281px) {
+		.top-line {
+			margin-bottom: 24px;
+			margin-top: 24px;
+		}
+	}
+
+	.top_big-line {
+		width: 100% !important;
+		margin-bottom: 120px;
+		margin-top: 120px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.top_big-line {
+			margin-bottom: 90px;
+			margin-top: 90px;
+			height: 20px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.top_big-line {
+			margin-bottom: 40px;
+			margin-top: 40px;
+			height: 8px;
+		}
+	}
+
+	.double-imgBlock1 {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+
+	.double-imgBlock1 img {
+		width: 791px;
+		height: 650px !important;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.double-imgBlock1 img {
+			width: 569px;
+			height: 466px !important;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.double-imgBlock1 img {
+			width: 100%;
+			height: 270px !important;
+		}
+	}
+
+	.next-project .project-block {
+		background-image: url(assets/imgs/case_elfort_westmotorsImg.webp);
+	}
+
+	@media screen and (max-width: 768px) {
+		.next-project .project-block {
+			background-image: url(assets/imgs/case_elfort_westmotorsMobile.webp);
+		}
+
+		.next-project .project-block {
+			padding: 0;
+		}
+
+		.next-project .project-block .overlay-block {
+			width: 100%;
+			height: 100%;
+			background: #00000066;
+			display: flex;
+			justify-content: center;
+			padding: 120px 0 200px 0;
+		}
+	}
+
+	.title-block1 {
+		margin-bottom: 80px !important;
+
+	}
+
+	/*  */
+
+	@media screen and (max-width: 1281px) {
+		.title-block1 {
+			margin-bottom: 60px !important;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.title-block1 {
+			margin-bottom: 30px !important;
+		}
+
+		.toMobileGap {
+			gap: 50px !important;
+		}
+	}
+
+
+	/*  */
+	.analitika-site .img-block img.mobile-img {
+		display: none;
+	}
+
+	@media screen and (max-width: 769px) {
+		.analitika-site .img-block img.mobile-img {
+			display: block;
+		}
+
+		.analitika-site .img-block .mobile-img~img {
+			display: none;
+		}
+
+		.analitika-site .img-block img {
+			display: block;
+		}
+	}

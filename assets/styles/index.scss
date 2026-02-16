@@ -1,0 +1,4719 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'PT Root UI';
+	src: url('../fonts/pt-root-ui_vf.ttf') format('truetype');
+}
+
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+	transform: none !important;
+}
+
+.accordion-collapse {
+	transition: height 0.3s ease;
+}
+
+a {
+	.hover-animation {
+		transition: all .3s ease;
+	}
+
+	&:hover {
+
+		.hover-animation {
+			transform: rotate(45deg);
+		}
+	}
+}
+
+button {
+	.hover-animation {
+		transition: all .3s ease;
+	}
+
+	&:hover {
+		.hover-animation {
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.shiny-text {
+	font-size: 64px;
+	font-weight: 700;
+	display: inline-block;
+
+	--base-color: #151515;
+	--shine-color: #ffffff;
+	--spread: 120deg;
+
+	background-image: linear-gradient(var(--spread),
+			var(--base-color) 0%,
+			var(--base-color) 35%,
+			var(--shine-color) 50%,
+			var(--base-color) 65%,
+			var(--base-color) 100%);
+
+	background-size: 200% auto;
+	background-position: 150% center;
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.shorter-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* desktop */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+	.shorter-text {
+		-webkit-line-clamp: 3;
+
+		// 
+		&.main-blogs_title {
+			-webkit-line-clamp: 2;
+		}
+	}
+}
+
+/* ochilgan holat */
+.shorter-text.open {
+	-webkit-line-clamp: unset;
+	overflow: visible;
+}
+
+
+.main-title {
+	color: var(--Black, #151515);
+	/* 1920/H1 */
+	font-family: "PT Root UI";
+	font-size: 120px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	/* 120px */
+
+	@media screen and (max-width: 1281px) {
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 96px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+	}
+
+	@media screen and (max-width: 768px) {
+		color: var(--Black, #151515);
+		/* 360/H1 */
+		font-family: "PT Root UI";
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		/* 45px */
+	}
+
+	@media screen and (max-width: 769px) {
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		/* 40px */
+	}
+}
+
+
+
+.main-section_title {
+	color: var(--Black, #151515);
+
+	/* 1920/H2 */
+	font-family: "PT Root UI";
+	font-size: 88px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%;
+
+	@media screen and (max-width: 1280px) {
+		font-size: 72px;
+		font-weight: 700;
+		line-height: 110%;
+	}
+
+	@media screen and (max-width: 769px) {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 100%;
+	}
+}
+
+.main-item-title {
+	color: var(--Black, #151515);
+
+	/* 1920/H3 */
+	font-family: "PT Root UI";
+	font-size: 46px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%;
+
+
+	@media screen and (max-width: 769px) {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 110%;
+	}
+}
+
+.mobile-element {
+	display: none;
+
+	@media screen and (max-width: 768px) {
+		display: block;
+	}
+}
+
+a,
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+dl,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+// Endi fontni butun saytda ishlatish
+body {
+	font-family: 'PT Root UI', sans-serif;
+	overflow: unset !important;
+	padding: 0 !important;
+}
+
+.header_container {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 25px 30px;
+
+	@media screen and (max-width: 1300px) {
+		padding: 14px 30px;
+	}
+
+	@media screen and (max-width: 769px) {
+		padding: 10px 15px;
+		max-width: 360px;
+	}
+}
+
+.container {
+	max-width: 1608px;
+	width: 100%;
+	padding: 0 15px;
+
+	@media screen and (max-width: 1550px) {
+		padding: 0 58px;
+	}
+
+	@media screen and (max-width: 769px) {
+		max-width: 360px;
+		padding: 0 15px;
+	}
+}
+
+
+.bg-images {
+	overflow: hidden;
+	position: relative;
+
+	.img1 {
+		width: 1500px;
+		height: 1409px;
+		transform: rotate(163.441deg);
+		position: absolute;
+		top: -300px;
+		right: -360px;
+		z-index: -1;
+
+		// 
+		@media screen and (max-width: 1300px) {
+			width: 1088.903px;
+			height: 1000.903px;
+			transform: rotate(163.441deg);
+			top: -215px;
+			right: -343px;
+		}
+
+		@media screen and (max-width: 769px) {
+			top: -137px;
+			right: -196px;
+			width: 588px;
+			height: 588px;
+			transform: rotate(163.441deg);
+		}
+	}
+}
+
+.header_block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (max-width: 650px) {
+		gap: 4px;
+	}
+
+	.logo {
+		// color: #FFF;
+		font-family: "PT Root UI";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 135%;
+		/* 32.4px */
+		text-transform: uppercase;
+
+		@media screen and (max-width: 1280px) {
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 135%;
+			text-transform: capitalize;
+		}
+
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+
+		// 
+		span {
+			// color: #FFF;
+			font-family: "PT Root UI";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 135%;
+			text-transform: uppercase;
+
+			@media screen and (max-width: 1280px) {
+				color: var(--Black, #151515);
+				font-family: "PT Root UI";
+				font-size: 22px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 135%;
+				text-transform: lowercase;
+			}
+		}
+	}
+
+	.logo.mobile {
+		display: none;
+
+		@media screen and (max-width: 900px) {
+			display: flex;
+			color: #000;
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 100%;
+
+			/* 16px */
+			span {
+				color: #000;
+				font-family: "PT Root UI";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 100%;
+			}
+		}
+
+		@media screen and (max-width: 769px) {
+			text-transform: uppercase;
+			color: #000;
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+
+			/* 16px */
+			span {
+				text-transform: uppercase;
+				color: #000;
+				font-family: "PT Root UI";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 100%;
+			}
+		}
+	}
+
+	.logo-block.mobile {
+		display: none;
+
+		@media screen and (max-width: 900px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 276px;
+			height: 50px;
+			border-radius: 10px;
+			background: rgba(242, 242, 242, 0.80);
+			backdrop-filter: blur(10px);
+			padding-left: 15px;
+			padding-bottom: 18px;
+			padding-top: 16px;
+			padding-right: 15px;
+
+			.burgerMenuIcon {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+			}
+
+		}
+
+		@media screen and (max-width: 650px) {
+			width: 100%;
+		}
+	}
+}
+
+.wrapper {
+	position: relative;
+	// overflow: hidden;
+}
+
+header {
+	position: absolute;
+	width: 100%;
+	z-index: 9999;
+	// transition: all .3s ease;
+	top: 0;
+	overflow: hidden;
+	height: 90px;
+	transition: all .3s ease;
+
+	@media screen and (max-width: 1300px) {
+		height: 72px;
+	}
+
+
+	// background: #000;
+	@media screen and (max-width: 768px) {
+		position: fixed !important;
+		top: 0 !important;
+
+		&.modal-opened {
+			top: 0 !important;
+			background: #000 !important;
+			height: 100% !important;
+		}
+	}
+
+	// height: 100%;
+
+	.logo {
+		color: var(--Black, #151515);
+
+		span {
+			color: var(--Black, #151515);
+		}
+	}
+
+	li a {
+		color: var(--Black, #151515);
+	}
+
+	// 
+	&.header-open {
+		position: fixed;
+		background: rgba(255, 255, 255, 0.80);
+		backdrop-filter: blur(10px);
+		height: 90px;
+
+		@media screen and (max-width: 1300px) {
+			height: 72px;
+		}
+
+		@media screen and (max-width: 768px) {
+			background: none;
+			backdrop-filter: unset;
+		}
+
+		.logo {
+			color: var(--Black, #151515) !important;
+
+			span {
+				color: var(--Black, #151515) !important;
+			}
+		}
+
+		li a {
+			color: var(--Black, #151515) !important;
+		}
+	}
+
+	.burgerMenu-modal {
+		width: 100%;
+		border-radius: 10px;
+		background: #FFF;
+		backdrop-filter: blur(10px);
+		margin-top: 5px;
+		text-align: center;
+		padding-bottom: 20px;
+		padding-top: 51px;
+		transition: all .3s ease;
+		opacity: 0;
+		// visibility: hidden;
+		// transition: opacity 0.3s ease;
+
+		// 
+		&.modal-open {
+			opacity: 1;
+			// visibility: visible;
+
+			// --- MANA SHU QISM ELEMENTLARNI HARAKATGA KELTIRADI ---
+			nav ul li,
+			.socials,
+			.btn {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		nav ul li,
+		.socials,
+		.btn {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.5s ease, transform 0.5s ease;
+		}
+
+		@for $i from 1 through 5 {
+			nav ul li:nth-child(#{$i}) {
+				transition-delay: #{$i * 0.1}s;
+			}
+		}
+
+		.socials {
+			transition-delay: 0.6s;
+		}
+
+		.btn {
+			transition-delay: 0.7s;
+		}
+
+		// 
+		nav {
+			margin-bottom: 62px;
+
+			ul {
+				display: inline-flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 24px;
+
+				a {
+					color: var(--Black, #151515);
+					font-family: "PT Root UI";
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					/* 24px */
+					letter-spacing: 0.4px;
+					text-transform: uppercase;
+
+					&.active {
+						letter-spacing: 0.28px;
+						text-decoration-line: underline;
+						text-decoration-style: solid;
+						text-decoration-skip-ink: auto;
+						text-decoration-thickness: auto;
+						text-underline-offset: auto;
+						text-underline-position: from-font;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		// 
+		.header-actions {
+			display: flex;
+			flex-direction: column;
+			gap: 194px;
+
+			.socials {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				justify-content: center;
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 44px;
+					height: 44px;
+					border-radius: 10px;
+					border: 1px solid var(--Black, #151515);
+					background: rgba(255, 255, 255, 0.70);
+					backdrop-filter: blur(10px);
+					transition: all .3s ease;
+
+					// 
+					&:hover {
+						background-color: #000;
+
+						path {
+							fill: #fff;
+						}
+					}
+				}
+			}
+
+			.btn {
+				display: flex;
+				width: 290px;
+				height: 52px;
+				padding: 14px 28px 15px 28px;
+				justify-content: center;
+				align-items: center;
+				gap: 8px;
+				border-radius: 10px;
+				background: var(--Gray3, #F2F2F2);
+				margin: 0 auto;
+				color: var(--Black, #151515);
+				text-align: center;
+
+				/* 360/tag */
+				font-family: "PT Root UI";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 19.2px */
+				letter-spacing: 0.32px;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: #000;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.header_item {
+	display: flex;
+	align-items: center;
+	gap: 458px;
+
+	@media screen and (max-width: 1700px) {
+		gap: 300px;
+	}
+
+	@media screen and (max-width: 1400px) {
+		gap: 150px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		gap: 50px;
+	}
+
+	// 
+	nav {
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+
+		ul {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			gap: 24px;
+		}
+
+		a {
+			// color: #FFF;
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 16.8px */
+			letter-spacing: 0.28px;
+			text-transform: uppercase;
+			transition: all .3s ease;
+
+			// 
+			&:hover {
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 16.8px */
+				letter-spacing: 0.28px;
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+				text-transform: uppercase;
+			}
+
+			&.active {
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 16.8px */
+				letter-spacing: 0.28px;
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+				text-transform: uppercase;
+			}
+		}
+
+	}
+
+	.header-actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 4px;
+
+		// 
+		.btn {
+			display: flex;
+			height: 44px;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			gap: 6px;
+			border-radius: 10px;
+			border: 1px solid var(--White, #FFF);
+			background: var(--Blue, #1458E4);
+			color: var(--White, #FFF);
+			text-align: center;
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			/* 16.8px */
+			text-transform: uppercase;
+			transition: all .3s ease;
+
+			@media screen and (max-width: 650px) {
+				display: none;
+			}
+
+			&:hover {
+				border-radius: 10px;
+				border: 1px solid var(--White, #151515);
+				background: var(--Black, #151515);
+				// border-color: #151515;
+			}
+		}
+
+		// 
+		.socials {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 4px;
+
+			a {
+				width: 44px;
+				height: 44px;
+				border-radius: 10px;
+				border: 1px solid var(--Black, #151515);
+				background: rgba(255, 255, 255, 0.70);
+				backdrop-filter: blur(10px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all .3s ease;
+
+				@media screen and (max-width: 650px) {
+					&:last-child {
+						display: none;
+					}
+
+					width: 50px;
+					height: 50px;
+					border-radius: 10px;
+					border: 1px solid #FFF;
+					background: var(--Blue, #1458E4);
+					backdrop-filter: blur(10px);
+
+					path {
+						fill: #FFF;
+					}
+				}
+
+				&:hover {
+					border-radius: 10px;
+					border: 1px solid var(--Black, #151515);
+					background: var(--Black, #151515);
+					backdrop-filter: blur(10px);
+
+					path {
+						fill: #FFF;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.contact-modal {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.80);
+	backdrop-filter: blur(15px);
+	position: fixed;
+	z-index: 99999;
+	color: #ffffff;
+	padding: 12px;
+	transition: all .3s ease;
+	display: none;
+
+	@media screen and (max-width: 768px) {
+		padding: 15px;
+	}
+
+	&.openContact-modal {
+		display: block;
+	}
+
+	label {
+		transition: all .3s ease;
+	}
+
+	// 
+	.iti__globe {
+		display: none;
+	}
+
+	// 
+	.close {
+		width: fit-content;
+		margin-left: auto;
+		display: flex;
+		width: 44px;
+		height: 44px;
+		padding: 6px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.10);
+		cursor: pointer;
+	}
+
+	// 
+	.form-select {
+		--bs-form-select-bg-img: 0;
+		background-image: url(../imgs/chevron-down.svg);
+	}
+
+	// 
+	.block {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: var(--White, #FFF);
+
+		.modal-title {
+			color: var(--White, #FFF);
+			text-align: center;
+
+			/* 1920/H3 */
+			font-family: "PT Root UI";
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			/* 50.6px */
+			margin-bottom: 60px;
+
+			// 
+			@media screen and (max-width: 768px) {
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 110%;
+				margin-bottom: 56px;
+			}
+
+			// 
+		}
+
+		.success-message {
+			display: flex;
+			width: 586px;
+			padding: 12px 20px;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			border-radius: 10px;
+			background: #DAFCE8;
+			color: #009D73;
+
+			/* 1920/text sml */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 23.8px */
+			display: none;
+
+			@media screen and (max-width: 1300px) {
+				width: 470px;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 140%;
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 330px;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+			}
+		}
+
+		.floating-block {
+			position: relative;
+
+			&.error {
+				input {
+					border-bottom: 1px solid #EF2D2D !important;
+				}
+
+				.error-text {
+					display: block;
+				}
+			}
+
+			&.valid {
+				input {
+					border-bottom: 1px solid #009D73 !important;
+				}
+			}
+
+			// 
+			label {
+				position: absolute;
+				top: -7px;
+				transition: all .3s ease;
+				z-index: -1;
+
+				// 
+				&.active {
+					top: -35px;
+				}
+			}
+
+			// 
+
+			// 
+			.iti {
+				display: block !important;
+
+			}
+
+			.iti__country-container {
+				left: unset;
+				right: 0;
+			}
+
+			.iti__arrow {
+				display: none;
+			}
+
+			.iti__country {
+				color: var(--Black, #151515);
+
+				/* 360/text sml */
+				font-family: "PT Root UI";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+				/* 20.8px */
+			}
+
+			.iti__search-icon {
+				left: unset;
+				right: 10px;
+			}
+
+			.error-text {
+				color: #EF2D2D;
+
+				/* 1920/text xs */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				/* 16.8px */
+				margin-top: 2px;
+				display: none;
+			}
+
+			.floating-block.error input {
+				border-bottom: 1px solid #ff3b30;
+			}
+
+			input {
+
+				padding-left: 0 !important;
+
+				&:focus+label {
+					top: -35px;
+				}
+			}
+		}
+
+		.inputs {
+			display: flex;
+			flex-direction: column;
+			gap: 39px;
+
+			@media screen and (max-width: 1281px) {
+				gap: 45px;
+			}
+
+			@media screen and (max-width: 769px) {
+				gap: 42px;
+			}
+
+			label,
+			select {
+				color: var(--White, #FFF) !important;
+			}
+
+			option {
+				color: #000;
+				padding: 20px;
+			}
+
+			select {
+				cursor: pointer;
+			}
+
+			input,
+			textarea,
+			select {
+				border: none;
+				border-radius: 0;
+				box-shadow: none !important;
+				border-bottom: 1px solid #7C7C7C;
+				background-color: transparent;
+				padding: 0;
+				transition: all .3 ease;
+				color: var(--Black, #FFF);
+
+				/* 1920/text */
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 29.4px */
+				letter-spacing: -0.42px;
+				resize: none;
+
+				@media screen and (max-width: 1281px) {
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					/* 26.6px */
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 769px) {
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+					/* 24.7px */
+					letter-spacing: -0.38px;
+				}
+			}
+
+
+
+			textarea:focus+label {
+				top: -30px;
+			}
+
+			label {
+				color: var(--Black, #151515);
+
+				/* 1920/text */
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 29.4px */
+				letter-spacing: -0.42px;
+				padding-left: 0;
+				padding-bottom: 7px;
+
+				@media screen and (max-width: 1281px) {
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					/* 26.6px */
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 769px) {
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+					/* 24.7px */
+					letter-spacing: -0.38px;
+				}
+			}
+
+			textarea {
+				height: 67px;
+
+
+				&+label {
+					top: 20px;
+
+					&.active {
+						top: -30px;
+					}
+				}
+
+				// @media screen and (max-width: 1281px) {
+
+				// }
+
+				@media screen and (max-width: 769px) {
+					height: fit-content;
+				}
+			}
+
+			select {
+				padding-bottom: 7px;
+
+				@media screen and (max-width: 1281px) {
+					padding-bottom: 10px;
+				}
+
+				@media screen and (max-width: 769px) {
+					padding-bottom: 6px;
+				}
+			}
+
+			.buttons {
+				display: flex;
+				align-items: center;
+				gap: 35px;
+
+				@media screen and (max-width: 1281px) {
+					gap: 28px;
+					align-items: start;
+				}
+
+				@media screen and (max-width: 769px) {
+					flex-direction: column;
+					gap: 23px;
+				}
+
+				// 
+				.contact-data {
+					width: 300px;
+					color: var(--Gray1, #7C7C7C);
+
+					/* 1920/text xs */
+					font-family: "PT Root UI";
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+
+					@media screen and (max-width: 1281px) {
+						width: 210px;
+						font-size: 13px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%;
+					}
+
+					@media screen and (max-width: 769px) {
+						width: 100%;
+						font-size: 13px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%;
+					}
+
+					/* 16.8px */
+					a {
+						color: var(--Gray1, #7C7C7C);
+
+						/* 1920/text xs */
+						font-family: "PT Root UI";
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%;
+						text-decoration-line: underline;
+						text-decoration-style: solid;
+						text-decoration-skip-ink: auto;
+						text-decoration-thickness: auto;
+						text-underline-offset: auto;
+						text-underline-position: from-font;
+
+						@media screen and (max-width: 1281px) {
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 120%;
+						}
+
+						@media screen and (max-width: 769px) {
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 120%;
+						}
+					}
+
+
+				}
+
+				.sent-btn {
+					display: inline-flex;
+					height: 56px;
+					padding: 14px 28px 15px 28px;
+					justify-content: center;
+					align-items: center;
+					gap: 8px;
+					border-radius: 10px;
+					background: var(--White, #FFF);
+					color: var(--Black, #151515);
+					text-align: center;
+
+					/* 1920/tag */
+					font-family: "PT Root UI";
+					font-size: 17px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					/* 20.4px */
+					letter-spacing: 0.34px;
+					text-transform: uppercase;
+					border: none;
+					transition: all .3s ease;
+					border: 2px solid transparent;
+
+
+					path {
+						stroke: #151515;
+					}
+
+					&:hover {
+						background: transparent;
+						border: 2px solid #fff;
+						color: #fff;
+
+						path {
+							stroke: #fff;
+						}
+
+					}
+
+					@media screen and (max-width: 1281px) {
+						padding: 15px 24px;
+						height: 52px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 120%;
+						/* 19.2px */
+						letter-spacing: 0.32px;
+					}
+
+					@media screen and (max-width: 769px) {
+						width: 100%;
+						padding: 15px 28px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 120%;
+						/* 19.2px */
+						letter-spacing: 0.32px;
+					}
+				}
+			}
+		}
+	}
+
+	.buttons {
+		display: flex;
+		align-items: center;
+		gap: 35px;
+
+		// 
+		.contact-data {
+			width: 300px;
+			color: var(--Gray2, #D9D9D9);
+
+			/* 1920/text xs */
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+
+			/* 16.8px */
+			a {
+				color: var(--Gray2, #D9D9D9);
+
+				/* 1920/text xs */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+			}
+		}
+
+		.sent-btn {
+			display: inline-flex;
+			height: 56px;
+			padding: 14px 28px 15px 28px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			border-radius: 10px;
+			background: var(--White, #FFF);
+			border: none;
+			color: var(--Black, #151515);
+			text-align: center;
+
+			/* 1920/tag */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 20.4px */
+			letter-spacing: 0.34px;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+.custom-select-wrapper {
+	position: relative;
+	font-family: sans-serif;
+}
+
+.select-trigger {
+	cursor: pointer;
+	background: transparent;
+	border-bottom: 1px solid #7C7C7C;
+	padding-bottom: 7px;
+}
+
+.options-container {
+	display: none;
+	/* Bosilmaguncha yashirin turadi */
+	position: absolute;
+	bottom: 0;
+	/* Pastdan chiqishi uchun */
+	left: 0;
+	width: 100%;
+	background: white;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+	z-index: 100;
+	padding: 10px 0;
+	color: var(--Black, #151515);
+
+	/* 360/text sml */
+	font-family: "PT Root UI";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	/* 20.8px */
+	overflow: hidden;
+}
+
+.option {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.option:hover {
+	background: #f5f5f5;
+}
+
+.select-label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.3s ease;
+	pointer-events: none;
+	/* Matnni bosganda ham select ochilishi uchun */
+	color: var(--White, #FFF);
+
+	/* 1920/text */
+	font-family: "PT Root UI";
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* Tanlanganda yoki oyna ochiq bo'lganda yuqoriga chiqish */
+.custom-select-wrapper.active .select-label {
+	top: -20px;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* O'zingizga mos rangni qo'ying */
+}
+
+.select-trigger {
+	cursor: pointer;
+	background: transparent;
+	border-bottom: 1px solid #7C7C7C;
+	padding-bottom: 7px;
+	min-height: 36px;
+	/* Bo'sh bo'lganda ham chiziq turishi uchun */
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* 29.4px */
+	letter-spacing: -0.42px;
+
+	// 
+	&::after {
+		content: url(../imgs/chevron-down.svg);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+
+	}
+}
+
+.option img {
+	width: 24px;
+	height: 24px;
+}
+
+
+
+
+
+.cookie-container {
+	position: fixed;
+	bottom: 21px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: max-content;
+	border-radius: 10px;
+	background: rgba(21, 21, 21, 0.80);
+	backdrop-filter: blur(10px);
+	color: #fff;
+	padding: 12px 24px;
+	z-index: 1000;
+	transition: all 0.5s ease;
+	display: none;
+	align-items: center;
+	opacity: 0;
+
+	@media screen and (max-width: 1300px) {
+		bottom: 32px;
+	}
+
+	// 
+	@media screen and (max-width: 769px) {
+		width: 350px;
+		bottom: 12px;
+		padding: 32px 20px 20px 20px;
+	}
+
+	&.active {
+		display: flex; // yoki block, dizayningizga qarab
+		opacity: 1;
+	}
+
+	.cookie-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 32px;
+
+		@media screen and (max-width: 1300px) {
+			gap: 32px;
+		}
+
+		// 
+		@media screen and (max-width: 769px) {
+			gap: 18px;
+			flex-direction: column;
+			margin: 0 auto;
+		}
+
+		p {
+			margin: 0;
+			color: var(--White, #FFF);
+
+			/* 1920/text sml */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 23.8px */
+
+			a {
+				color: var(--White, #FFF);
+
+				/* 1920/text sml */
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+			}
+
+			@media screen and (max-width: 1300px) {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+
+				a {
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+				}
+			}
+
+			// 
+			@media screen and (max-width: 769px) {
+				width: 250px;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+
+				a {
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+				}
+			}
+
+
+		}
+	}
+
+	.cookie-actions {
+		display: flex;
+		align-items: baseline;
+		gap: 24px;
+
+		@media screen and (max-width: 1300px) {
+			gap: 20px;
+		}
+
+		// 
+		@media screen and (max-width: 769px) {
+			gap: 0;
+		}
+
+
+
+		.btn-primary {
+			border: none;
+			padding: 11px 20px;
+			border-radius: 10px;
+			background: var(--Blue, #1458E4);
+			cursor: pointer;
+			font-weight: bold;
+			color: var(--White, #FFF);
+			text-align: center;
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 16.8px */
+			text-transform: uppercase;
+			transition: all 0.3s;
+
+			&:hover {
+				background-color: #1d4ed8;
+			}
+
+			@media screen and (max-width: 1300px) {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+
+			}
+
+			// 
+			@media screen and (max-width: 769px) {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+			}
+
+		}
+
+		.btn-close {
+			background: none;
+			border: none;
+			cursor: pointer;
+			opacity: 1 !important;
+			margin: 0;
+			padding: 0;
+
+			@media screen and (max-width: 769px) {
+				position: absolute;
+				right: 12px;
+				top: 12px;
+			}
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+
+
+
+.floating-select-box {
+	position: relative;
+	font-family: "PT Root UI", sans-serif;
+	margin-top: 25px;
+	/* Label tepaga chiqishi uchun joy */
+}
+
+.floating-label-text {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.3s ease;
+	pointer-events: none;
+	color: var(--Black, #151515);
+
+	/* 1920/text */
+	font-family: "PT Root UI";
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* 29.4px */
+	letter-spacing: -0.42px;
+}
+
+/* Tanlanganda yoki ochiq bo'lganda label holati */
+.floating-select-box.is-active .floating-label-text {
+	top: -25px;
+	font-family: "PT Root UI";
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* 23.8px */
+}
+
+.floating-select-display {
+	cursor: pointer;
+	background: transparent;
+	border-bottom: 1px solid #D9D9D9;
+	padding-bottom: 7px;
+	min-height: 36px;
+	color: var(--Black, #151515);
+
+	/* 1920/text */
+	font-family: "PT Root UI";
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* 29.4px */
+	letter-spacing: -0.42px;
+}
+
+.floating-options-list {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	/* Pastdan chiqishi uchun */
+	left: 0;
+	width: 100%;
+	background: white;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+	z-index: 200;
+	padding: 10px 0;
+	color: var(--Black, #151515);
+
+	/* 360/text sml */
+	font-family: "PT Root UI";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	/* 20.8px */
+	overflow: hidden;
+}
+
+.floating-item {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	cursor: pointer;
+	transition: background 0.3s;
+	font-size: 16px;
+	line-height: 130%;
+}
+
+.floating-item:hover {
+	background: #f5f5f5;
+}
+
+.floating-item svg,
+.floating-item img {
+	width: 24px;
+	height: 24px;
+}
+
+
+
+
+
+
+
+
+
+.hero-section {
+	margin-top: 178px;
+
+	@media screen and (max-width: 1281px) {
+		margin-top: 121px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero-section {
+		margin-top: 354px;
+	}
+}
+
+.hero-section {
+
+	margin-bottom: 299px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 160px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	// .hero-block {}
+
+	// 
+	.main-title {
+		margin-bottom: 69px;
+
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 48px;
+		}
+
+		@media screen and (max-width: 481px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.section-description {
+		width: 384px;
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: -0.52px;
+
+		@media screen and (max-width: 1281px) {
+			width: 374px;
+			color: var(--Black, #151515);
+
+			/* 1280/text bg */
+			font-family: "PT Root UI";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 33.6px */
+			letter-spacing: -0.48px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 330px;
+			color: var(--Black, #151515);
+
+			/* 360/text bg */
+			font-family: "PT Root UI";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			/* 28.8px */
+			letter-spacing: -0.48px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.btn {
+		display: none;
+
+		@media screen and (max-width: 769px) {
+			display: flex;
+			height: 52px;
+			padding: 14px 28px 15px 28px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			border-radius: 10px;
+			background: var(--Blue, #1458E4);
+			color: var(--White, #FFF);
+			text-align: center;
+
+			/* 360/tag */
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+			margin: 0 auto;
+			width: fit-content;
+
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.applications {
+	margin-bottom: 200px;
+
+	@media screen and (max-width: 1280px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 60px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// 
+	.container {
+		@media screen and (max-width: 1280px) {
+			padding: 0 50px;
+		}
+
+		@media screen and (max-width: 769px) {
+			padding: 0 15px;
+			margin: 0;
+		}
+	}
+
+	// 
+	.section-title {
+		color: var(--Black, #151515);
+		/* 1920/H2 */
+		font-family: "PT Root UI";
+		font-size: 88px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 96.8px */
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 1280px) {
+			font-size: 72px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+		}
+	}
+
+
+	@media screen and (max-width: 768px) {
+		.section-title {
+			margin-bottom: 32px;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+		}
+	}
+
+	// 
+	.block {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: start;
+			gap: 32px;
+		}
+
+		.line {
+			@media screen and (max-width: 1280px) {
+				width: 200px;
+				height: 1px;
+			}
+		}
+	}
+
+	.section-title {
+		margin-bottom: 0;
+		// @media screen and (max-width: 768px) {
+
+		// }
+	}
+
+	.btn {
+		display: inline-flex;
+		height: 56px;
+		padding: 14px 28px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--Blue, #1458E4);
+		color: var(--White, #FFF);
+		text-align: center;
+
+		/* 1920/tag */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 20.4px */
+		letter-spacing: 0.34px;
+		text-transform: uppercase;
+		transition: all .3s ease;
+
+		@media screen and (max-width: 1280px) {
+			height: 52px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+		}
+
+		@media screen and (max-width: 768px) {
+			margin: 0 auto;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 120%;
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+			height: 52px;
+		}
+
+		&:hover {
+			border-radius: 10px;
+			background: var(--Black, #151515);
+		}
+	}
+
+	.line {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+
+
+
+.about {
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	.swiper-wrapper {
+		@media screen and (max-width: 769px) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+
+	// 
+	.section-title {
+		width: 1336px;
+		margin-bottom: 80px;
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		text-indent: 195px;
+
+		@media screen and (max-width: 1300px) {
+			width: 970px;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			/* 44px */
+			margin-bottom: 60px;
+			text-indent: 140px;
+		}
+
+		// @media screen and (max-width: 1281px) {
+
+		// }
+		@media screen and (max-width: 769px) {
+			width: 330px;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 115%;
+			margin-bottom: 40px;
+			text-indent: 44px;
+		}
+
+		span {
+			white-space: pre;
+		}
+	}
+
+	// 
+	.about-block {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		gap: 24px;
+
+		@media screen and (max-width: 769px) {
+			flex-direction: column;
+			gap: 40px;
+			align-items: start;
+			justify-content: unset;
+		}
+
+		// 
+		.swiper-slide {
+			height: auto;
+		}
+
+		// 
+		.item {
+			width: calc(100% / 3 - 16px);
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 40px;
+			justify-content: space-between;
+			cursor: pointer;
+			color: var(--Black, #151515);
+
+			// 
+			@media screen and (min-width: 769px) {
+				color: var(--Gray1, #7C7C7C);
+
+				.img-block {
+					opacity: 0.1;
+				}
+
+				&.active {
+					color: var(--Black, #151515);
+
+					.img-block {
+						opacity: 1;
+						transition: all 1.5s ease;
+					}
+
+					.num {
+						color: var(--Blue, #1458E4);
+
+					}
+
+					// 
+					.line {
+						width: 0;
+						height: 2px;
+						background: var(--Blue, #1458E4);
+					}
+				}
+
+				&:hover {
+					color: var(--Black, #151515);
+
+
+					.num {
+						color: var(--Blue, #1458E4);
+					}
+				}
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 100%;
+				gap: 0;
+			}
+
+			// 
+			// @media screen and (min-width: 769px) {
+			// }
+
+			.num {
+
+				/* 1920/label */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%;
+				/* 16.8px */
+				letter-spacing: 0.28px;
+				text-transform: uppercase;
+				margin-bottom: 7px;
+
+				@media screen and (max-width: 1300px) {
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 120%;
+					/* 15.6px */
+					letter-spacing: 0.26px;
+					text-transform: uppercase;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Blue, #1458E4);
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 120%;
+					letter-spacing: 0.26px;
+					text-transform: uppercase;
+					margin-bottom: 8px;
+				}
+			}
+
+			.line-item {
+				width: 100%;
+				height: 2px;
+				background: var(--Gray2, #D9D9D9);
+				margin-bottom: 20px;
+
+				@media screen and (max-width: 769px) {
+					height: 1px;
+					background: var(--Gray2, #D9D9D9);
+					margin-bottom: 12px;
+				}
+			}
+
+			// .line{
+
+			// }
+
+			.item-title {
+				font-family: "PT Root UI";
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				margin-bottom: 16px;
+
+				@media screen and (max-width: 1300px) {
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					margin-bottom: 12px;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Black, #151515);
+					font-family: "PT Root UI";
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					margin-bottom: 20px;
+				}
+
+
+			}
+
+			.item-description {
+				width: 100%;
+				/* 1920/text */
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 29.4px */
+				letter-spacing: -0.42px;
+				padding-right: 40px;
+
+				@media screen and (max-width: 1300px) {
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					/* 26.6px */
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 769px) {
+					height: fit-content;
+					color: var(--Black, #151515);
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+					/* 24.7px */
+					letter-spacing: -0.38px;
+					padding-right: 0;
+					display: none;
+
+					&.mobile-element {
+						display: block;
+					}
+				}
+			}
+
+			.img-block {
+				// overflow: hidden;
+				width: 100%;
+				height: 347px;
+
+				@media screen and (max-width: 1300px) {
+					height: 248px;
+				}
+
+				@media screen and (max-width: 769px) {
+					margin-bottom: 20px;
+					height: 220px;
+				}
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				flex-shrink: 0;
+				border-radius: 10px;
+				object-fit: cover;
+				// transition: transform 0.4s ease;
+			}
+
+		}
+
+
+	}
+}
+
+
+.texnolog {
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	.stacking-container {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.blocks {
+			width: 100%;
+			display: flex;
+			flex-direction: row !important;
+			justify-content: space-between;
+			position: sticky;
+			top: 5vh;
+
+			@media screen and (max-width: 769px) {
+				position: unset;
+			}
+		}
+	}
+
+	.main-section_title {
+		width: 1336px;
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 1300px) {
+			width: 967px;
+			margin-bottom: 60px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 280px;
+			margin-bottom: 32px;
+		}
+
+
+	}
+
+	.blocks {
+		border-radius: 10px 10px 0 0;
+		background: var(--Yellow, #F7FF9E);
+		padding-top: 59px;
+		padding-bottom: 91px;
+		color: var(--Black, #151515);
+
+		@media screen and (max-width: 1280px) {
+			padding-bottom: 80px;
+			padding-top: 40px;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding-top: 32px;
+			padding-bottom: 40px;
+		}
+
+		&.social {
+			border-radius: 10px 10px 0 0;
+			background: var(--Violet, #3E0067);
+			color: var(--White, #FFF);
+
+			// 
+			.main-item-title {
+				color: var(--White, #FFF);
+			}
+		}
+
+		.inner-block {
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+			// gap: 296px;
+
+			@media screen and (max-width: 1300px) {
+				gap: 0;
+				justify-content: space-between;
+			}
+
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+				gap: 30px;
+				align-items: center;
+			}
+		}
+
+		.content-block {
+			.main-item-title {
+				font-family: "PT Root UI";
+				font-size: 46px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 110%;
+				margin-bottom: 40px;
+
+				@media screen and (max-width: 1300px) {
+					width: 470px;
+					margin-bottom: 32px;
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					font-size: 30px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 110%;
+					margin-bottom: 24px;
+				}
+			}
+
+			.item-description {
+				width: 656px;
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				letter-spacing: -0.42px;
+				margin-bottom: 24px;
+
+				@media screen and (max-width: 1300px) {
+					width: 471px;
+					margin-bottom: 20px;
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					/* 26.6px */
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 130%;
+					/* 24.7px */
+					letter-spacing: -0.38px;
+					margin-bottom: 24px;
+				}
+			}
+
+			.icon-items {
+				display: flex;
+				flex-direction: column;
+				gap: 14px;
+
+				@media screen and (max-width: 1300px) {
+					gap: 16px;
+				}
+
+				@media screen and (max-width: 769px) {
+					gap: 14px;
+				}
+
+				.icon {
+					display: flex;
+					align-items: start;
+					gap: 12px;
+
+					svg {
+						width: 24px !important;
+						height: 24px !important;
+					}
+
+					@media screen and (max-width: 769px) {
+						.decktop-element {
+							display: none;
+						}
+
+						.mobile-element {
+							display: block;
+						}
+					}
+				}
+
+				.text {
+					width: 620px;
+					font-family: "PT Root UI";
+					font-size: 21px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					letter-spacing: -0.42px;
+
+					@media screen and (max-width: 1300px) {
+						width: 436px;
+						font-size: 19px;
+						line-height: 140%;
+						letter-spacing: -0.38px;
+					}
+
+					@media screen and (max-width: 769px) {
+						width: 294px;
+						font-size: 19px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 130%;
+						/* 24.7px */
+						letter-spacing: -0.38px;
+					}
+				}
+			}
+		}
+
+		.img-block {
+			margin-top: 1px;
+
+			@media screen and (max-width: 769px) {
+				margin-top: 0;
+			}
+
+			img {
+				width: 656px;
+				height: 370px;
+				border-radius: 10px;
+
+				@media screen and (max-width: 1300px) {
+					width: 471px;
+					height: 265px;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 100%;
+					height: 186px;
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.partners {
+	overflow: hidden;
+	margin-bottom: 180px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media (max-width: 769px) {
+		margin-bottom: 60px;
+		gap: 20px;
+	}
+
+	.blocks {
+		display: flex;
+		width: 100%;
+
+		.track {
+			display: flex;
+			flex-shrink: 0;
+			gap: 140px;
+			padding: 0 30px;
+
+			@media (max-width: 1300px) {
+				gap: 62px;
+			}
+
+			@media (max-width: 769px) {
+				gap: 30px;
+			}
+		}
+	}
+
+	// Animatsiyalar
+	.move-right .track {
+		animation: marquee-right 60s linear infinite;
+	}
+
+	.move-left .track {
+		animation: marquee-left 60s linear infinite;
+	}
+
+	.item {
+		flex-shrink: 0;
+
+		img {
+			height: 85px; // Standart balandlik
+			width: auto;
+			object-fit: contain;
+
+			@media (max-width: 769px) {
+				height: 50px;
+			}
+		}
+	}
+}
+
+// O'ngga harakat (Boshidan oxiriga)
+@keyframes marquee-right {
+	from {
+		transform: translateX(-50%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+// Chapga harakat (Noldan yarmigacha)
+@keyframes marquee-left {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.case {
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		margin-bottom: 60px;
+	}
+
+	.title-block {
+		display: flex;
+		align-items: end;
+		margin-bottom: 80px;
+		gap: 233px;
+
+		@media screen and (max-width: 1281px) {
+			gap: 123px;
+			margin-bottom: 64px;
+		}
+
+		@media screen and (max-width: 769px) {
+			flex-direction: column;
+			gap: 24px;
+			margin-bottom: 24px;
+		}
+
+	}
+
+	.main-section_title {
+		width: 584px;
+
+		@media screen and (max-width: 1281px) {
+			width: 471px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+		}
+
+	}
+
+	.section-description {
+		width: 520px;
+		color: var(--Black, #151515);
+
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		margin-bottom: 10px;
+
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 0;
+			width: 471px;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 24.7px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	.blocks {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 80px 24px;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 1281px) {
+			gap: 60px 24px;
+			margin-bottom: 72px;
+		}
+
+		@media screen and (max-width: 769px) {
+			gap: 42px 6px;
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		&.item {
+			display: block;
+		}
+	}
+
+	.item {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		.toHoverEffect {
+			height: 598px;
+			overflow: hidden;
+			border-radius: 10px;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 1281px) {
+				height: 432px;
+				margin-bottom: 16px;
+			}
+
+			@media screen and (max-width: 769px) {
+				height: 270px;
+				margin-bottom: 12px;
+			}
+		}
+
+		&.no-hover {
+			cursor: default;
+
+
+
+			img,
+			video {
+				transform: scale(1) !important;
+			}
+
+			&:hover {
+
+
+				img,
+				video {
+					transform: scale(1) !important;
+				}
+
+				.item-title {
+					text-decoration: none;
+				}
+			}
+		}
+
+		// 
+		.item-title {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: var(--Black, #151515);
+
+			/* 1920/H4 */
+			font-family: "PT Root UI";
+			font-size: 26px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 31.2px */
+			margin-bottom: 4px;
+			transition: all .3s ease;
+
+			span {
+				transition: transform 0.3s ease; // Animatsiya silliq bo'lishi uchun
+
+				// --- MUHIM TUZATISHLAR ---
+				// 1. GPU ni majburiy ishga tushirish (Hardware Acceleration)
+				transform: translateZ(0);
+				-webkit-transform: translateZ(0);
+
+				// 2. Orqa fon ko'rinishini yashirish (qirralarni silliqlaydi)
+				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+
+				// 3. Brauzerga bu element o'zgarishini oldindan aytish
+				will-change: transform;
+
+				// 4. SVG chiziqlari aniq qolishi uchun
+				shape-rendering: geometricPrecision;
+
+				// Ba'zan Firefox/Chrome da text rendering ta'sir qilishi mumkin
+				text-rendering: optimizeLegibility;
+			}
+
+			@media screen and (max-width: 1281px) {
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 28.8px */
+			}
+
+			@media screen and (max-width: 769px) {
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+			}
+		}
+
+		.item-description {
+			color: var(--Black, #151515);
+
+			/* 1920/text sml */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+
+			@media screen and (max-width: 1281px) {
+				font-size: 16px;
+			}
+
+			@media screen and (max-width: 769px) {
+				line-height: 130%;
+			}
+
+		}
+
+		.categories {
+			opacity: 0;
+			display: flex;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			width: 100%;
+			align-items: center;
+			align-content: center;
+			gap: 2px;
+			flex-wrap: wrap;
+			transform: translateY(-5px);
+			transition: all .3s ease;
+
+			// 
+			.category_item {
+				position: relative;
+				display: flex;
+				padding: 4px 10px;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				border-radius: 5px;
+				background: var(--White, #FFF);
+				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+				color: var(--Black, #151515);
+
+				/* 1920/tag */
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 20.4px */
+				letter-spacing: 0.34px;
+				text-transform: uppercase;
+			}
+		}
+
+		@media screen and (min-width: 1025px) {
+			&:hover {
+				.categories {
+					opacity: 1;
+					transform: translateY(0);
+					display: flex;
+				}
+
+				img,
+				video {
+					transform: scale(1.03);
+				}
+			}
+		}
+
+		@media screen and (max-width: 769px) {
+			.categories {
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				display: flex;
+				width: 100%;
+				align-items: center;
+				align-content: center;
+				gap: 2px;
+				flex-wrap: wrap;
+				transition: all .3s ease;
+				opacity: 1;
+				transform: translateY(0);
+
+				// 
+				.category_item {
+					position: relative;
+					display: flex;
+					padding: 2px 6px;
+					justify-content: center;
+					align-items: center;
+					gap: 10px;
+					border-radius: 5px;
+					background: var(--White, #FFF);
+					box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+					color: var(--Black, #151515);
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 120%;
+					/* 15.6px */
+					letter-spacing: 0.26px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	/* 🔥 KATTA: 1,4,5,8,9,12... */
+	.item:nth-child(4n + 1),
+	.item:nth-child(4n + 4) {
+		width: calc(67.17% - 12px);
+
+		// @media screen and (max-width: 1281px) {
+		// 	font-size: 16px;
+		// }
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+		}
+
+		.toHoverEffect {
+			height: 598px;
+			overflow: hidden;
+			border-radius: 10px;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 1281px) {
+				height: 432px;
+				margin-bottom: 16px;
+			}
+
+			@media screen and (max-width: 769px) {
+				height: 270px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+
+	img,
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+
+		@media (min-width: 768px) {
+			transform: scale(1.03);
+			transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			will-change: transform;
+		}
+
+	}
+
+	/* 🔥 KICHIK: 2,3,6,7,10,11... */
+	.item:nth-child(4n + 2),
+	.item:nth-child(4n + 3) {
+		width: calc(32.83% - 12px);
+
+		@media screen and (max-width: 769px) {
+			width: calc(50% - 3px);
+
+			// img,
+			// video {
+			// 	height: 203px;
+			// }
+		}
+
+		.toHoverEffect {
+			height: 598px;
+			overflow: hidden;
+			border-radius: 10px;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 1281px) {
+				height: 432px;
+				margin-bottom: 16px;
+			}
+
+			@media screen and (max-width: 769px) {
+				height: 203px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	.view-all {
+		display: flex;
+		height: 56px;
+		padding: 15px 28px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--Gray3, #F2F2F2);
+		color: var(--Black, #151515);
+		text-align: center;
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		letter-spacing: 0.34px;
+		text-transform: uppercase;
+		width: fit-content;
+		margin: 0 auto;
+		transition: all .3s ease;
+
+		// 
+		&:hover {
+			background: var(--Black, #000);
+			color: var(--White, #FFF);
+		}
+
+		// 
+		@media screen and (max-width: 1281px) {
+			padding: 15px 24px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+		}
+
+		@media screen and (max-width: 769px) {
+			margin-top: 40px;
+
+			/* 360/tag */
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+		}
+	}
+
+
+	.item {
+		&:hover {
+
+			img,
+			video {
+				transform: scale(1);
+			}
+
+			.item-title {
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+
+				// 
+				span {
+					// Rotate bilan birga translateZ ni ham saqlab qolamiz
+					transform: rotate(45deg) translateZ(0);
+					// margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+
+// keys end
+
+.effect-section {
+	background: var(--Violet, #3E0067);
+	padding-top: 110px;
+	padding-bottom: 129px;
+	margin-bottom: 0;
+
+	// 
+	@media screen and (max-width: 1300px) {
+		padding: 60px 0;
+	}
+
+	@media screen and (max-width: 769px) {
+		padding: 50px 0 60px 0;
+	}
+
+	// 
+
+	// 
+	.effect-title {
+		width: 951px;
+		color: var(--White, #FFF);
+		text-align: center;
+
+		/* 1920/phrases */
+		font-family: "PT Root UI";
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 61.6px */
+		margin-bottom: 60px;
+		margin-left: auto;
+		margin-right: auto;
+
+		// 
+		@media screen and (max-width: 1300px) {
+			width: 670px;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			/* 44px */
+			margin-bottom: 45px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+			color: var(--White, #FFF);
+			text-align: center;
+
+			/* 360/H4 */
+			font-family: "PT Root UI";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 28.8px */
+			margin-bottom: 38px;
+		}
+	}
+
+	.section-description {
+		width: 708px;
+		color: var(--White, #FFF);
+		text-align: center;
+
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (max-width: 1300px) {
+			width: 670px;
+			margin-bottom: 24px;
+			font-size: 19px;
+			line-height: 140%;
+			letter-spacing: -0.38px;
+		}
+
+
+		@media screen and (max-width: 769px) {
+			width: 294px;
+			font-size: 19px;
+			line-height: 130%;
+			letter-spacing: -0.38px;
+		}
+	}
+
+	.effect-btn {
+		display: flex;
+		height: 56px;
+		padding: 15px 28px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--White, #FFF);
+		color: var(--Black, #151515);
+		text-align: center;
+
+		/* 1920/tag */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 20.4px */
+		letter-spacing: 0.34px;
+		text-transform: uppercase;
+		margin: 0 auto;
+		transition: all .3s ease;
+		border: none;
+
+		&:hover {
+			background: transparent;
+			border: 2px solid #fff;
+			color: var(--White, #FFF);
+
+			path {
+				stroke: #ffffff;
+			}
+		}
+
+		@media screen and (max-width: 1300px) {
+			padding: 15px 24px;
+			height: 52px;
+			font-size: 16px;
+			letter-spacing: 0.32px;
+		}
+
+		@media screen and (max-width: 769px) {
+			padding: 15px 28px;
+		}
+
+	}
+}
+
+.testimonial {
+	background: var(--Gray3, #F2F2F2);
+	padding: 140px 0;
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		padding: 100px 0;
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		padding: 60px 0;
+		margin-bottom: 60px;
+	}
+
+	// 
+	// .swiper-wrapper{
+	// 	height: auto !important;
+	// }
+	// 
+
+	.testimonialSwiper {
+		overflow: hidden; // Faqat bitta slayd ko'rinishi uchun
+		width: 100%;
+		position: relative;
+
+		.swiper-wrapper {
+			display: flex;
+			transition: transform 0.5s ease-in-out; // Silliq o'tish
+			width: 100%;
+		}
+
+		.swiper-slide {
+			min-width: 100%; // Har bir slayd to'liq kenglikni oladi
+			box-sizing: border-box;
+		}
+	}
+
+	.starter-items {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 80px;
+		// .main-section_title {
+
+		// }
+
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 60px;
+		}
+
+		@media screen and (max-width: 769px) {
+			display: block;
+			margin-bottom: 32px;
+		}
+
+	}
+
+	.paginations {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		position: relative;
+		z-index: 100; // Tugmalar har doim slaydlardan ustun turishi shart
+
+		&.mobile-element {
+			display: none;
+
+			@media screen and (max-width: 769px) {
+				display: flex !important;
+				margin: 40px auto 0 auto;
+				width: fit-content;
+				z-index: 110; // Mobil versiyada yanada yuqori z-index
+			}
+		}
+
+		@media screen and (max-width: 769px) {
+			&:not(.mobile-element) {
+				display: none !important;
+			}
+		}
+	}
+
+	.btn {
+		cursor: pointer;
+		user-select: none;
+		/* pointer-events: auto bosish hodisasini qat'iy yoqadi */
+		pointer-events: auto !important;
+
+		&:active {
+			transform: scale(0.95); // Bosilganda sezilarli feedback
+		}
+	}
+
+	.btn {
+		cursor: pointer;
+		user-select: none;
+		pointer-events: auto !important; // Bosishni qat'iy ta'minlash
+
+		&:active {
+			transform: scale(0.9); // Vizual aloqa
+		}
+	}
+
+	.btn {
+		cursor: pointer;
+		pointer-events: auto !important;
+	}
+
+	.btn {
+		cursor: pointer;
+		user-select: none;
+		pointer-events: auto !important;
+	}
+
+	.btn {
+		display: flex;
+		width: 44px;
+		height: 44px;
+		padding: 6px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		background: rgba(0, 0, 0, 0.05);
+		transition: all .3s ease;
+		cursor: pointer;
+
+		// 
+		&:hover {
+			background: rgba(0, 0, 0, 0.12);
+		}
+
+		&:active {
+			border: none;
+		}
+
+	}
+
+	// 
+	.testimonialSwiper {
+		width: 1064px;
+		margin: 0 auto;
+
+		@media screen and (max-width: 1281px) {
+			width: 768px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 100%;
+		}
+
+		.swiper-slide {
+			opacity: 0.4;
+			transition: opacity 0.3s ease;
+		}
+
+		.swiper-slide-active {
+			opacity: 1;
+		}
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		// 
+		.item-description {
+			width: 100%;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 26px;
+			line-height: 140%;
+			letter-spacing: -0.52px;
+			margin-bottom: 12px;
+			-webkit-line-clamp: unset;
+			transition: max-height 0.3s ease;
+
+			@media screen and (min-width: 1282px) {
+				font-size: 24px;
+				letter-spacing: -0.48px;
+				-webkit-line-clamp: 6;
+			}
+
+			@media screen and (max-width: 1281px) {
+				font-size: 24px;
+				letter-spacing: -0.48px;
+				-webkit-line-clamp: 6;
+			}
+
+			@media screen and (max-width: 769px) {
+				font-size: 19px;
+				line-height: 130%;
+				letter-spacing: -0.38px;
+				-webkit-line-clamp: 10;
+			}
+
+			&.expanded {
+				-webkit-line-clamp: unset !important;
+				display: block !important;
+			}
+		}
+
+		.viewAll-description {
+			display: block; // Ortiqcha line-clamp olib tashlandi
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 17px;
+			text-decoration: underline;
+			text-align: end;
+			margin-bottom: 40px;
+			cursor: pointer;
+			transition: opacity 0.3s;
+			margin-top: auto;
+
+			&:hover {
+				opacity: 0.7;
+			}
+
+			@media screen and (max-width: 1281px) {
+				font-size: 16px;
+				margin-bottom: 32px;
+			}
+		}
+
+		.avatar-block {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			flex-shrink: 0;
+
+			.avatar {
+				width: 80px;
+				height: 80px;
+				aspect-ratio: 1/1;
+
+
+				// 
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 80px;
+				}
+			}
+
+			.about-avatar {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+
+
+				@media screen and (max-width: 1281px) {
+					gap: 4px;
+				}
+
+			}
+
+			.name {
+				color: var(--Black, #151515);
+
+				/* 1920/tag */
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				/* 20.4px */
+				letter-spacing: 0.34px;
+				text-transform: uppercase;
+
+				@media screen and (max-width: 1281px) {
+					font-size: 16px;
+					letter-spacing: 0.32px;
+				}
+
+
+			}
+
+			.work-man {
+				width: 586px;
+				color: var(--Blue, #1458E4);
+
+				/* 1920/text sml */
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+
+				/* 23.8px */
+				@media screen and (max-width: 1281px) {
+					width: 476px;
+					font-size: 16px;
+					line-height: 140%;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 100%;
+					line-height: 120%;
+				}
+			}
+		}
+	}
+
+	.testimonialSwiper {
+		.swiper-wrapper {
+			transition: height 0.3s ease-out; // Balandlik o'zgarganda sakrab tushmasligi uchun
+		}
+	}
+}
+
+.blog-section {
+
+	margin-bottom: 180px;
+
+	@media screen and (max-width: 1281px) {
+		margin-bottom: 120px;
+	}
+
+
+	.header_container {
+		padding: 0;
+
+		// 
+		.blogSwiper {
+			padding: 0 16px 0 30px;
+
+			@media screen and (max-width: 768px) {
+				padding: 0;
+				padding-left: 15px;
+			}
+		}
+	}
+
+	// 
+
+
+	// 
+	.starter-items {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 80px;
+		// .main-section_title {
+
+		// }
+
+		@media screen and (max-width: 1281px) {
+			margin-bottom: 60px;
+		}
+
+		@media screen and (max-width: 769px) {
+			display: block;
+			margin-bottom: 32px;
+		}
+
+	}
+
+	.paginations {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+
+		&.mobile-element {
+			display: none;
+			margin: 0 auto;
+		}
+
+		@media screen and (max-width: 769px) {
+			display: none;
+
+			// 
+			&.mobile-element {
+				display: flex;
+				margin-top: 40px;
+				width: fit-content;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	.btn {
+		display: flex;
+		width: 44px;
+		height: 44px;
+		padding: 6px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		border-radius: 10px;
+		background: rgba(0, 0, 0, 0.05);
+		transition: all .3s ease;
+		cursor: pointer;
+		border: none !important;
+
+		&.disabled {
+			path {
+				stroke: var(--Gray1, #7C7C7C);
+			}
+		}
+
+		// 
+		&:hover {
+			background: rgba(0, 0, 0, 0.12);
+		}
+
+		&:active {
+			border: none;
+		}
+	}
+
+
+	.swiper-slide {
+		width: 464px;
+		cursor: pointer;
+
+		// &:nth-child(4) {}
+		@media screen and (max-width: 1280px) {
+			width: 372px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 310px;
+		}
+
+		.toZoom {
+			width: 100%;
+			overflow: hidden;
+			border-radius: 10px;
+			margin-bottom: 6px;
+
+
+
+		}
+
+		img {
+			width: 100%;
+			transform: scale(1.03);
+			transition: all .3s ease;
+			height: 271px;
+			object-fit: cover;
+
+			@media screen and (max-width: 1280px) {
+				height: 211px;
+			}
+
+			@media screen and (max-width: 769px) {
+				height: 176px;
+			}
+		}
+
+		.sub-title {
+			color: var(--Gray1, #7C7C7C);
+
+			/* 1920/text xs */
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			/* 16.8px */
+			margin-bottom: 10px;
+
+			@media screen and (max-width: 1280px) {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+			}
+
+			@media screen and (max-width: 769px) {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+			}
+		}
+
+		.item-title {
+			width: 92%;
+			color: var(--Black, #151515);
+			font-family: "PT Root UI";
+			font-size: 21px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 130%;
+			/* 27.3px */
+			margin-bottom: 8px;
+
+			@media screen and (max-width: 1280px) {
+				font-size: 19px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 130%;
+			}
+
+			@media screen and (max-width: 769px) {
+				line-height: 120%;
+			}
+		}
+
+		.item-description {
+			width: 95%;
+			overflow: hidden;
+			color: var(--Black, #151515);
+
+			/* 1920/text sml */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			margin-bottom: 16px;
+
+			@media screen and (max-width: 1280px) {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+			}
+
+			@media screen and (max-width: 769px) {
+				line-height: 130%;
+			}
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			color: var(--Black, #151515);
+
+			/* 1920/tag */
+			font-family: "PT Root UI";
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 20.4px */
+			letter-spacing: 0.34px;
+			text-transform: uppercase;
+
+			img {
+				width: 44px;
+				height: 44px;
+				transform: scale(1) !important;
+				border-radius: 50%;
+			}
+
+			@media screen and (max-width: 1280px) {
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.32px;
+			}
+
+			// @media screen and (max-width: 769px) {
+
+			// }
+		}
+
+		&:hover {
+			.toZoom {
+				img {
+					transform: scale(1);
+				}
+			}
+
+			.item-title {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.view-all_item {
+		width: 156px !important;
+		height: auto;
+		padding: 14px 28px 15px 28px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--Gray3, #F2F2F2);
+
+		color: var(--Black, #151515);
+		text-align: center;
+
+		/* 1280/tag */
+		font-family: "PT Root UI";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 19.2px */
+		letter-spacing: 0.32px;
+		text-transform: uppercase;
+		transition: all .3s ease;
+
+		// ;
+
+		@media screen and (max-width: 1280px) {
+			width: 142px !important;
+			padding: 15px 23px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 150px !important;
+			padding: 14px 28px 15px 27px;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 120%;
+			letter-spacing: 0.32px;
+			text-transform: uppercase;
+		}
+
+		// 
+		&:hover {
+			background: #E0E0E0;
+		}
+	}
+}
+
+
+
+.blog-page_section {
+	padding-top: 170px;
+	margin-bottom: 180px;
+
+	// 
+	@media screen and (max-width: 1280px) {
+		padding-top: 133px;
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 769px) {
+		padding-top: 100px;
+		margin-bottom: 60px;
+	}
+
+	// 
+	.main-title {
+		text-align: center;
+		margin-bottom: 40px;
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: 32px;
+		}
+
+		@media screen and (max-width: 769px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.page-description {
+		color: var(--Black, #151515);
+		text-align: center;
+
+		/* 1920/text bg */
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 36.4px */
+		letter-spacing: -0.52px;
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: 60px;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 140%;
+			letter-spacing: -0.48px;
+		}
+
+		@media screen and (max-width: 769px) {
+			width: 280px;
+			margin-bottom: 42px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 24.7px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	.main-blogs {
+		display: flex;
+		justify-content: center;
+		gap: 24px;
+		row-gap: 60px;
+		flex-wrap: wrap;
+
+		// 
+		// @media screen and (max-width: 1280px) {
+
+		// }
+
+		@media screen and (max-width: 769px) {
+			gap: 40px;
+		}
+
+		// 
+		.main-blogs_item {
+			width: calc(50% - 12px);
+			cursor: pointer; // Sichqoncha borganda qo'l belgisi chiqishi uchun
+
+			@media screen and (max-width: 769px) {
+				width: 100%;
+			}
+
+			// --- HOVER EFFEKTI (Butun kartochka uchun) ---
+			&:hover {
+
+				// 1. Rasm kichrayishi (3% ga)
+				.toZoom .img {
+					transform: scale(1);
+				}
+
+				// 2. Sarlavha tagiga chiziq tortilishi
+				.main-blogs_title {
+					text-decoration: underline;
+					text-decoration-thickness: 1px; // Chiziq qalinligi (ixtiyoriy)
+					text-underline-offset: 3px; // Matndan masofasi (ixtiyoriy)
+				}
+			}
+
+			.toZoom {
+				overflow: hidden;
+				height: 450px;
+				margin-bottom: 10px;
+				border-radius: 10px; // Rasm chetlari qirqilishi uchun (muhim)
+
+				.img {
+					height: 100%;
+					// Boshlang'ich holat: 3% ga kattalashtirilgan
+					transform: scale(1.03);
+					// Silliq o'tish effekti
+					transition: transform 0.3s ease;
+				}
+
+				@media screen and (max-width: 1280px) {
+					height: 323px;
+				}
+
+				@media screen and (max-width: 769px) {
+					height: 187px;
+					margin-bottom: 6px;
+				}
+			}
+
+			.img {
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				// border-radius bu yerda kerak emas, chunki otasi (.toZoom) da overflow:hidden bor
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				justify-content: end;
+				padding: 20px;
+
+				@media screen and (max-width: 769px) {
+					padding: 0;
+
+					.logo {
+						display: none;
+					}
+				}
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				color: var(--White, #FFF);
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				letter-spacing: 0.34px;
+				text-transform: uppercase;
+
+				img {
+					width: 44px;
+					height: 44px;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+				}
+
+				&.mobile-element {
+					display: none;
+				}
+
+				@media screen and (max-width: 1280px) {
+					font-size: 16px;
+					line-height: 120%;
+					letter-spacing: 0.32px;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Black, #151515);
+
+					img {
+						width: 32px;
+						height: 32px;
+					}
+
+					&.mobile-element {
+						display: block;
+					}
+				}
+			}
+
+			.main-blogs_date {
+				color: var(--Gray1, #7C7C7C);
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				margin-bottom: 12px;
+				display: block;
+
+				@media screen and (max-width: 1280px) {
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+				}
+
+				@media screen and (max-width: 769px) {
+					margin-bottom: 10px;
+				}
+			}
+
+			.main-blogs_title {
+				width: 586px;
+				overflow: hidden;
+				color: var(--Black, #151515);
+				font-family: "PT Root UI";
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 120%;
+				margin-bottom: 8px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+
+				// Title uchun silliq o'zgarish (agar kerak bo'lsa)
+				transition: text-decoration 0.3s ease;
+
+				@media screen and (max-width: 1280px) {
+					width: 540px;
+					font-size: 24px;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 330px;
+					font-size: 19px;
+				}
+			}
+
+			.main-blogs_description {
+				width: 586px;
+				overflow: hidden;
+				color: var(--Black, #151515);
+				font-family: "PT Root UI";
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+
+				@media screen and (max-width: 1280px) {
+					width: 540px;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 140%;
+				}
+
+				@media screen and (max-width: 769px) {
+					width: 330px;
+					margin-bottom: 16px;
+					line-height: 130%;
+				}
+			}
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	background: var(--Black, #151515);
+	padding-top: 120px;
+	padding-bottom: 32px;
+
+	// 
+	@media screen and (max-width: 1280px) {
+		padding-top: 48px;
+		padding-bottom: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding-top: 35px;
+		padding-bottom: 20px;
+	}
+
+	.container {
+		@media screen and (max-width: 769px) {
+			padding: 0;
+		}
+	}
+
+	// 
+	.footer_block {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: space-between;
+		margin-bottom: 132px;
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: 88px;
+		}
+
+		@media screen and (max-width: 769px) {
+			margin-bottom: 32px;
+		}
+
+		// 
+		.logo-block {
+			@media screen and (max-width: 769px) {
+				padding: 0 15px;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				margin-bottom: 30px;
+
+				@media screen and (max-width: 769px) {
+					gap: 12px;
+					margin-bottom: 20px;
+				}
+
+				a {
+					color: var(--White, #FFF);
+
+					/* 1920/H3 */
+					font-family: "PT Root UI";
+					font-size: 46px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 110%;
+					text-transform: uppercase;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					/* 50.6px */
+					@media screen and (max-width: 769px) {
+						svg {
+							width: 107px;
+							height: 21.622px;
+						}
+					}
+				}
+
+				.logo-sub-title {
+					width: 190px;
+					color: var(--Gray2, #D9D9D9);
+					font-family: "PT Root UI";
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+
+					@media screen and (max-width: 1300px) {
+						font-size: 13px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%;
+					}
+
+					@media screen and (max-width: 769px) {
+						width: 134px;
+						color: var(--Gray2, #D9D9D9);
+						font-family: "PT Root UI";
+						font-size: 10px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 120%;
+						/* 12px */
+					}
+				}
+			}
+
+			.logo-description {
+				width: 577px;
+				color: var(--White, #FFF);
+
+				/* 1920/text */
+				font-family: "PT Root UI";
+				font-size: 21px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 140%;
+				/* 29.4px */
+				letter-spacing: -0.42px;
+
+				// 
+				@media screen and (max-width: 1300px) {
+					width: 522px;
+					font-size: 19px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+					/* 26.6px */
+					letter-spacing: -0.38px;
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					color: var(--White, #FFF);
+
+					/* 360/text xs */
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+					/* 15.6px */
+				}
+			}
+		}
+
+		.footer_block-item {
+			display: flex;
+			flex-direction: column;
+			gap: 122px;
+
+			// 
+			@media screen and (max-width: 1280px) {
+				gap: 111px;
+			}
+
+			// 
+			@media screen and (max-width: 768px) {
+				order: -1;
+			}
+
+			@media screen and (max-width: 769px) {
+				width: 240px;
+				gap: 37px;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 24px;
+
+			@media screen and (max-width: 1280px) {
+				gap: 20px;
+			}
+
+			@media screen and (max-width: 769px) {
+				gap: 20px;
+				row-gap: 11px;
+				justify-content: center;
+				width: 100%;
+			}
+
+			a {
+				color: var(--White, #FFF);
+
+				/* 1920/label */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%;
+				/* 16.8px */
+				letter-spacing: 0.28px;
+				text-transform: uppercase;
+				transition: all .3s ease;
+
+				&:hover {
+					text-decoration-line: underline;
+					text-decoration-style: solid;
+					-webkit-text-decoration-skip: ink;
+					text-decoration-skip-ink: auto;
+					text-decoration-thickness: auto;
+					text-underline-offset: auto;
+					text-underline-position: from-font;
+					text-transform: uppercase;
+				}
+
+				@media screen and (max-width: 1300px) {
+					font-size: 13px;
+					font-weight: 500;
+					line-height: 120%;
+					letter-spacing: 0.26px;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--White, #FFF);
+
+					/* 360/label */
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 120%;
+					/* 15.6px */
+					letter-spacing: 0.26px;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.footer-icons {
+			display: inline-flex;
+			align-items: center;
+			justify-content: end;
+			gap: 8px;
+
+			@media screen and (max-width: 769px) {
+				justify-content: center;
+				margin-bottom: 40px;
+				gap: 14px;
+			}
+
+			// 
+			.icon {
+				width: 44px;
+				height: 44px;
+				border-radius: 10px;
+				border: 1px solid #FFF;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all .3s ease;
+
+				.hover {
+					display: none;
+				}
+
+				&:hover {
+					border-radius: 10px;
+					border: 1px solid #FFF;
+					background: var(--White, #FFF);
+					backdrop-filter: blur(10px);
+					border-color: #FFF;
+
+					// 
+					&:first-child {
+						path {
+							fill: #08C;
+						}
+					}
+
+					// 
+					&:nth-child(2n) {
+						svg {
+							display: none;
+						}
+
+						.hover {
+							display: block;
+						}
+					}
+
+					// 
+					&:nth-child(3) {
+						path {
+							fill: #25D366;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer_bottom-item {
+		.site-name {
+			color: var(--Yellow, #F7FF9E);
+
+			/* 1920/text xs */
+			font-family: "PT Root UI";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+			/* 16.8px */
+			text-align: end;
+			border-bottom: 1px solid var(--Gray1, #7C7C7C);
+			padding-bottom: 22px;
+			margin-bottom: 31px;
+
+			@media screen and (max-width: 1300px) {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				/* 15.6px */
+				padding-bottom: 16px;
+				margin-bottom: 14px;
+			}
+
+			@media screen and (max-width: 769px) {
+				color: var(--Yellow, #F7FF9E);
+
+				/* 1280/text xs */
+				font-family: "PT Root UI";
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				/* 15.6px */
+				text-align: start;
+				padding-bottom: 16px;
+				margin-bottom: 20px;
+				padding-left: 15px;
+			}
+		}
+
+		.end-block {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+
+			@media screen and (max-width: 769px) {
+				padding: 0 15px;
+			}
+
+			a {
+				color: var(--Gray1, #7C7C7C);
+
+				/* 1920/text xs */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+				/* 16.8px */
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-skip-ink: auto;
+				text-decoration-thickness: auto;
+				text-underline-offset: auto;
+				text-underline-position: from-font;
+
+				@media screen and (max-width: 1300px) {
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Gray1, #7C7C7C);
+
+					/* 1280/text xs */
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+					/* 15.6px */
+					text-decoration-line: underline;
+					text-decoration-style: solid;
+					text-decoration-skip-ink: auto;
+					text-decoration-thickness: auto;
+					text-underline-offset: auto;
+					text-underline-position: from-font;
+				}
+			}
+
+			span {
+				color: var(--Gray1, #7C7C7C);
+
+				/* 1920/text xs */
+				font-family: "PT Root UI";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+
+				/* 16.8px */
+				@media screen and (max-width: 1300px) {
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+				}
+
+				@media screen and (max-width: 769px) {
+					color: var(--Gray1, #7C7C7C);
+
+					/* 1280/text xs */
+					font-family: "PT Root UI";
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+					/* 15.6px */
+				}
+			}
+
+			.end-item {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 42px;
+
+				@media screen and (max-width: 1300px) {
+					gap: 55px;
+				}
+
+				@media screen and (max-width: 769px) {
+					gap: 16px;
+
+					&:first-child {
+						margin-bottom: 16px;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/* Faqat mobil ekranlarda (767px gacha) */
+@media (max-width: 767px) {
+	.blog-section {
+		overflow: hidden;
+		/* Sahifa yon tomonga chiqib ketmasligi uchun */
+	}
+
+	/* Sarlavha konteyneri - chetdan 24px (yoki sizda 55px bo'lsa) masofada qoladi */
+	.blog-section .container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	/* Slider konteyneri ekran chetigacha yoyilishi kerak */
+	.blog-section .header_container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.blogSwiper {
+		/* Slayder boshida sarlavha bilan bir chiziqda turishi uchun padding beramiz */
+		padding-left: 24px;
+		padding-right: 24px;
+
+		/* MUHIM: Skroll bo'lganda slaydlar chetga (0px) taqalishi uchun */
+		overflow: visible !important;
+	}
+
+	/* Slaydlar o'lchami rasmga mos bo'lishi uchun */
+	.blogSwiper .swiper-slide {
+		width: 280px;
+		/* yoki o'zingizga mos kenglik */
+		height: auto;
+	}
+}

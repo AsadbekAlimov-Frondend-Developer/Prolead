@@ -1,0 +1,701 @@
+	@media screen and (max-width: 768px) {
+
+		/* FAQ Section Konteyneri */
+		.faqs .container {
+			padding-left: 0;
+			padding-right: 0;
+			overflow: hidden;
+		}
+
+		/* Sarlavha - har doim 24px masofada turadi */
+
+		/* Swiper Slider Konteyneri */
+		.faqs .block.swiper {
+			/* Birinchi slayd sarlavha bilan bir xil vertikal chiziqda boshlanishi uchun */
+			padding-left: 15px;
+			/* padding-right: 24px; */
+
+			/* MUHIM: Skroll bo'lganda slaydlar ekran chetiga (0px) taqalishi uchun */
+			overflow: visible !important;
+		}
+
+	}
+
+	/* Video elementlari uchun (Pixel Perfect holatga keltirish) */
+
+
+	.wrapper {
+		overflow: unset;
+	}
+
+	header .logo {
+		color: var(--Black, #FFF) !important;
+	}
+
+	header .logo span {
+		color: var(--Black, #FFF) !important;
+	}
+
+	.header_item nav a {
+		color: var(--Blackv, #FFF);
+	}
+
+	.hero {
+		margin-top: 231px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.hero {
+			margin-top: 20px;
+		}
+	}
+
+	main {
+		background: var(--Blue, #1458E4);
+		height: 930px;
+		overflow: hidden;
+		margin-bottom: 120px;
+	}
+
+	@media screen and (min-width: 767px) and (max-width: 1280px) {
+		main {
+			height: 100vh;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		main {
+			margin-bottom: 40px;
+			height: 501px;
+		}
+	}
+
+	.circular-gallery {
+		height: 100vh;
+		/* overflow: hidden; */
+		cursor: grab;
+		position: relative;
+	}
+
+	.circular-gallery:active {
+		cursor: grabbing;
+	}
+
+	.circular-gallery canvas {
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin-top: -192px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.circular-gallery canvas {
+			margin-top: -120px;
+		}
+	}
+
+	.leaders {
+		margin-bottom: 280px;
+		position: relative;
+		z-index: 9;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders {
+			margin-bottom: 60px;
+		}
+	}
+
+	.leaders h1 {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders h1 {
+			margin-bottom: 40px;
+		}
+	}
+
+	.leaders .block {
+		display: flex;
+		gap: 160px;
+		position: relative;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.leaders .block {
+			gap: 50px;
+		}
+
+
+	}
+
+	@media screen and (max-width: 769px) {
+		.leaders .block {
+			flex-direction: column;
+			gap: 20px;
+			margin: 0 auto;
+			width: 50%;
+		}
+
+		.leaders .block {
+			width: 100%;
+		}
+
+		.leaders .block .accordion {
+			width: 50%;
+		}
+
+		.leaders .block .accordion {
+			width: 100%;
+		}
+	}
+
+	/* @media screen and (max-width: 1024px) {} */
+
+	/* @media screen and (max-width: 768px) {} */
+
+	.leaders .block .imgs-block {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .block .imgs-block {
+			display: none;
+		}
+	}
+
+	.leaders .block .imgs-block img {
+		width: 656px;
+		height: 656px;
+		position: sticky;
+		top: 40px;
+		border-radius: 10px;
+		opacity: 1;
+		transition: all 0.3s ease;
+	}
+
+	@media screen and (max-width: 1400px) {
+		.leaders .block .imgs-block img {
+			width: 471px;
+			height: 471px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.leaders .block .imgs-block img {
+			position: unset;
+			margin: 0;
+		}
+
+		/* .leaders .block .imgs-block img {
+		} */
+
+		.leaders .block .imgs-block .img2,
+		.leaders .block .imgs-block .img3 {
+			display: none !important;
+		}
+	}
+
+	.leaders .block .imgs-block .img1 {
+		opacity: 0;
+	}
+
+	.leaders .block .imgs-block .img2 {
+		opacity: 0;
+	}
+
+	.leaders .accardions {
+		display: flex;
+		flex-direction: column;
+		gap: 320px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.leaders .accardions {
+			gap: 240px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accardions {
+			gap: 40px;
+		}
+	}
+
+	.leaders .accordion .accardion-title {
+		color: var(--Black, #151515);
+		/* 1920/H3 */
+		font-family: "PT Root UI";
+		font-size: 46px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 50.6px */
+		margin-bottom: 40px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accardion-title {
+			color: var(--Black, #151515);
+			/* 360/H3 */
+			font-family: "PT Root UI";
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			/* 33px */
+			margin-bottom: 32px;
+		}
+	}
+
+	.leaders .accordion .mobile-element {
+		width: 100%;
+		height: 220px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		object-fit: cover;
+	}
+
+	.leaders .accordion .accardion-description {
+		width: 656px;
+		color: var(--Black, #151515);
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		margin-bottom: 80px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accardion-description {
+			width: 100%;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			letter-spacing: -0.38px;
+			margin-bottom: 32px;
+		}
+	}
+
+	.leaders .accordion .accordion-button {
+		padding: 0;
+		padding-left: 12px;
+		padding-bottom: 20px;
+		align-items: start;
+		gap: 104px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accordion-button {
+			gap: 20px;
+			padding-right: 12px;
+		}
+	}
+
+	.leaders .accordion .accordion-button::after {
+		background-image: url(assets/imgs/button-plus.svg);
+		transition: all 0.3s ease;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accordion-button::after {
+			margin-top: 3px;
+		}
+	}
+
+	.leaders .accordion .accordion-item.accordion-opened .accordion-button:not(.collapsed)::after {
+		transform: rotate(45deg);
+	}
+
+	/* .leaders .accordion .accordion-item.accordion-opened { */
+
+
+	@media screen and (min-width: 768px) {
+		.leaders .accordion .accordion-button:hover::after {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.leaders .accordion .accordion-button .titles {
+		display: flex;
+		gap: 24px;
+		align-items: start;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accordion-button .titles {
+			gap: 8px;
+		}
+	}
+
+	.leaders .accordion .accordion-button .titles .effect {
+		color: var(--Black, #151515);
+		/* 1920/H4 */
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 31.2px */
+	}
+
+	@media screen and (max-width: 1300px) {
+		.leaders .accordion .accordion-button .titles .effect br {
+			display: none;
+		}
+
+		.leaders .accordion .accordion-button .titles .effect {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accordion-button .titles .effect {
+			width: 240px;
+			font-family: "PT Root UI";
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+
+
+
+
+	}
+
+	.leaders .accordion .accordion-button .num {
+		color: var(--Blue, #1458E4);
+		/* 1920/label */
+		font-family: "PT Root UI";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
+		/* 16.8px */
+		letter-spacing: 0.28px;
+		text-transform: uppercase;
+		margin-top: 7px;
+		display: block;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion .accordion-button .num {
+			margin-top: 4px;
+		}
+	}
+
+	.leaders .accordion .accordion-button:not(.collapsed) {
+		background: transparent;
+		color: #151515;
+		border: none;
+		box-shadow: none;
+	}
+
+	.leaders .accordion .accordion-button:focus {
+		box-shadow: none;
+	}
+
+	.leaders .accordion .accordion-item {
+		border-left: none;
+		border-right: none;
+		border-top: var(--Gray2, #D9D9D9);
+		margin-bottom: 20px;
+		border-radius: 0;
+		transition: all 0.3s ease;
+	}
+
+	.leaders .accordion .accordion-item:hover {
+		border-color: var(--Black, #151515);
+	}
+
+	.leaders .accordion .accordion-item.accordion-opened {
+		border-color: var(--Black, #151515);
+	}
+
+	.leaders .accordion .accordion-item:last-child {
+		margin-bottom: 0;
+	}
+
+	.leaders .accordion-body {
+		width: 600px;
+		padding: 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.leaders .accordion-body {
+			width: 467px;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion-body {
+			padding-top: 4px;
+			position: relative;
+			z-index: 9999;
+			margin-left: 12px;
+			width: 306px;
+		}
+	}
+
+	.leaders .accordion-collapse {
+		margin-left: 44px;
+		width: 600px;
+		color: var(--Black, #151515);
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		padding: 0;
+	}
+
+	@media screen and (max-width: 768px) {
+		.leaders .accordion-collapse {
+			width: -moz-fit-content;
+			width: fit-content;
+			color: var(--Black, #151515);
+			/* 360/text sml */
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 20.8px */
+			margin-left: 0;
+		}
+	}
+
+	.section-title {
+		color: var(--Black, #151515);
+		/* 1920/H2 */
+		font-family: "PT Root UI";
+		font-size: 88px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 96.8px */
+		margin-bottom: 80px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.section-title {
+			/* padding-left: 15px; */
+			font-size: 72px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 60px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.section-title {
+			margin-bottom: 32px;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+		}
+	}
+
+	.faqs {
+		background: var(--Gray3, #F2F2F2);
+		padding: 120px 0;
+		margin-bottom: 180px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.faqs {
+			margin-bottom: 120px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs {
+			padding: 60px 0;
+			margin-bottom: 60px;
+		}
+	}
+
+	.faqs .block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.faqs .box {
+		width: 384px;
+		height: 683px;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 10px;
+		background-size: cover;
+		position: relative;
+
+		overflow: hidden;
+
+	}
+
+	.faqs .box .overlay-block {
+		width: 100%;
+		height: 100%;
+		background-image: url(assets/imgs/video-overlay.svg);
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		position: absolute;
+		z-index: 99;
+		padding: 24px 20px;
+		display: flex;
+		align-items: end;
+		justify-content: start;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.faqs .box {
+			height: 486px;
+		}
+
+		/* .faqs .container {
+			max-width: 100%;
+			padding: 0;
+		} */
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs .box {
+			height: 552px;
+		}
+	}
+
+	.faqs .box .video-frame {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		z-index: 1;
+	}
+
+	.faqs .box .box-description {
+		width: 320px;
+		color: var(--White, #FFF);
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		position: relative;
+		z-index: 2;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.faqs .box .box-description {
+			width: 233px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+
+		.faqs .box .box-description br {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs .box .box-description {
+			width: 270px;
+			color: var(--White, #FFF);
+			font-family: "PT Root UI";
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+
+
+	}
+
+	.faqs .box .video-player {
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		cursor: pointer;
+		z-index: 999;
+	}
+
+	.faqs .box .video-player:hover rect {
+		border-radius: 10px;
+		fill: rgba(255, 255, 255, 0.8);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+
+	.faqs .box .video-player:hover .video-pause rect:first-child {
+		border-radius: 10px;
+		fill: rgba(255, 255, 255, 0.8);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+
+	.faqs .box .video-player:hover .video-pause rect:nth-child(2) {
+		fill: #7C7C7C;
+	}
+
+	.faqs .box .video-player:hover .video-pause rect:nth-child(3) {
+		fill: #7C7C7C;
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs .box .video-player {
+			right: 8px;
+			top: 8px;
+		}
+	}
+
+	/* Hover effekti butun blok (.box) uchun */
+	.faqs .box:hover .video-player rect {
+		border-radius: 10px;
+		/* fill: rgba(255, 255, 255, 0.8); */
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+
+	/* Video qo'yilganda fon (overlay) va matnni yashirish */
+	.faqs .box.playing .overlay-block {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+	}
+
+	/* Video o'ynayotganda butun blok ustiga bosish kursori pointer bo'lishi uchun */
+	.faqs .box {
+		cursor: pointer;
+	}
+
+	/*# sourceMappingURL=services.css.map */

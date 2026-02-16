@@ -1,0 +1,1026 @@
+	@media screen and (max-width: 769px) {
+		.container {
+			padding-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	/* Konteynerni to'g'irlash */
+	/* Davlatlar ro'yxati ekran chetidan chiqmasligi uchun */
+	.iti__country-list {
+		right: 0 !important;
+		/* O'ng tomonga yopishtirish */
+		left: auto !important;
+		/* Chapdan ochiq qoldirish */
+		width: 100% !important;
+		max-width: 300px !important;
+		white-space: normal !important;
+		z-index: 1000 !important;
+	}
+
+	/* Xatolik holatida input ostidagi chiziq qizil bo'lishi uchun */
+	#phoneBlock.error input {
+		border-bottom: 1px solid #ff4d4d !important;
+	}
+
+	header .header_block .logo {
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 135%;
+		/* 32.4px */
+		text-transform: uppercase;
+
+	}
+
+	header .header_block .logo span {
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 135%;
+		text-transform: uppercase;
+	}
+
+
+
+	.contact-section {
+		padding-top: 170px;
+		margin-bottom: 180px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section {
+			padding-top: 133px;
+			margin-bottom: 90px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section {
+			padding-top: 100px;
+			margin-bottom: 60px;
+			width: 330px;
+		}
+	}
+
+	.contact-section .main-section_title {
+		margin-bottom: 120px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .main-section_title {
+			margin-bottom: 74px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .main-section_title {
+			margin-bottom: 48px;
+		}
+	}
+
+	.contact-section .contact-block {
+		display: flex;
+		align-items: start;
+		gap: 357px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .contact-block {
+			gap: 123px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .contact-block {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+
+	.contact-section .datas-block .main-item-title {
+		margin-bottom: 40px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .main-item-title {
+			margin-bottom: 32px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .main-item-title {
+			margin-bottom: 24px;
+		}
+	}
+
+	.contact-section .datas-block .data-description {
+		width: 520px;
+		color: var(--Black, #151515);
+		/* 1920/text sml */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 23.8px */
+		margin-bottom: 24px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .data-description {
+			width: 471px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .data-description {
+			width: 100%;
+			line-height: 130%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.contact-section .datas-block .socials {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		margin-bottom: 40px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .socials {
+			margin-bottom: 32px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .socials {
+			margin-bottom: 33px;
+			gap: 20px;
+		}
+	}
+
+	.contact-section .datas-block .socials .item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.contact-section .datas-block .socials .sub-title {
+		color: var(--Black, #151515);
+		/* 1920/label */
+		font-family: "PT Root UI";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
+		/* 16.8px */
+		letter-spacing: 0.28px;
+		text-transform: uppercase;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .socials .sub-title {
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 120%;
+			/* 15.6px */
+			letter-spacing: 0.26px;
+			text-transform: uppercase;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .socials .sub-title {
+			line-height: 120%;
+			letter-spacing: 0.26px;
+		}
+	}
+
+	.contact-section .datas-block .socials .link {
+		color: var(--Blue, #1458E4);
+		/* 1920/H4 */
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 31.2px */
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .socials .link {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .socials .link {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+	}
+
+	.contact-section .datas-block .socials .social-description {
+		color: var(--Gray1, #7C7C7C);
+		/* 1920/text xs */
+		font-family: "PT Root UI";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		/* 16.8px */
+		margin-top: 4px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .socials .social-description {
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .socials .social-description {
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	.contact-section .datas-block .item-description {
+		width: 520px;
+		color: var(--Black, #151515);
+		/* 1920/text sml */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 23.8px */
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .datas-block .item-description {
+			width: 471px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .datas-block .item-description {
+			width: 100%;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+	}
+
+	.contact-section .form-title {
+		color: var(--Black, #151515);
+		/* 1920/H3 */
+		font-family: "PT Root UI";
+		font-size: 46px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+		/* 50.6px */
+		margin-bottom: 60px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .form-title {
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 58px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .form-title {
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			margin-bottom: 46px;
+		}
+	}
+
+	.contact-section input[type=number]::-webkit-inner-spin-button,
+	.contact-section input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	.contact-section .success-message {
+		display: flex;
+		width: 586px;
+		padding: 12px 20px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		background: #DAFCE8;
+		color: #009D73;
+		/* 1920/text sml */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 23.8px */
+		display: none;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.contact-section .success-message {
+			width: 470px;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 140%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .success-message {
+			width: 330px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+		}
+	}
+
+	.contact-section .floating-block {
+		position: relative;
+	}
+
+	.contact-section .floating-block label {
+		position: absolute;
+		top: -7px;
+		transition: all 0.3s ease;
+		z-index: -1;
+	}
+
+	.contact-section .floating-block label.active {
+		top: -35px;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+	}
+
+	.contact-section .floating-block input:focus-visible:invalid~.error-text {
+		scale: 1;
+	}
+
+	.contact-section .floating-block textarea:focus-visible:invalid~.error-text {
+		scale: 1;
+	}
+
+	.contact-section .floating-block input:focus+label {
+		top: -35px;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+	}
+
+	.contact-section .inputs {
+		display: flex;
+		flex-direction: column;
+		gap: 39px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs {
+			gap: 45px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs {
+			gap: 42px;
+		}
+	}
+
+	.contact-section .inputs input,
+	.contact-section .inputs textarea,
+	.contact-section .inputs select {
+		border: none;
+		border-radius: 0;
+		box-shadow: none !important;
+		border-bottom: 1px solid #D9D9D9;
+		background-color: transparent;
+		padding: 0;
+		transition: all 0.3 ease;
+		color: var(--Black, #151515);
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		resize: none;
+	}
+
+	@media screen and (max-width: 1281px) {
+
+		.contact-section .inputs input,
+		.contact-section .inputs textarea,
+		.contact-section .inputs select {
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+
+		.contact-section .inputs input,
+		.contact-section .inputs textarea,
+		.contact-section .inputs select {
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 24.7px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	.contact-section .inputs textarea:focus+label {
+		top: -30px;
+	}
+
+	.contact-section .inputs label {
+		color: var(--Black, #151515);
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		padding-left: 0;
+		padding-bottom: 7px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs label {
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs label {
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 24.7px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	.contact-section .inputs textarea {
+		height: 67px;
+	}
+
+	.contact-section .inputs textarea+label {
+		top: 20px;
+	}
+
+	.contact-section .inputs textarea+label.active {
+		top: -30px;
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs textarea {
+			height: -moz-fit-content;
+			height: fit-content;
+		}
+	}
+
+	.contact-section .inputs select {
+		padding-bottom: 7px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs select {
+			padding-bottom: 10px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs select {
+			padding-bottom: 6px;
+		}
+	}
+
+	.contact-section .inputs .buttons {
+		display: flex;
+		align-items: center;
+		gap: 35px;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs .buttons {
+			gap: 28px;
+			align-items: start;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs .buttons {
+			flex-direction: column;
+			gap: 23px;
+		}
+	}
+
+	.contact-section .inputs .buttons .contact-data {
+		width: 300px;
+		color: var(--Gray1, #7C7C7C);
+		/* 1920/text xs */
+		font-family: "PT Root UI";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		/* 16.8px */
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs .buttons .contact-data {
+			width: 210px;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs .buttons .contact-data {
+			width: 100%;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	.contact-section .inputs .buttons .contact-data a {
+		color: var(--Gray1, #7C7C7C);
+		/* 1920/text xs */
+		font-family: "PT Root UI";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		text-decoration-line: underline;
+		text-decoration-style: solid;
+		-webkit-text-decoration-skip: ink;
+		text-decoration-skip-ink: auto;
+		text-decoration-thickness: auto;
+		text-underline-offset: auto;
+		text-underline-position: from-font;
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs .buttons .contact-data a {
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs .buttons .contact-data a {
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
+
+	.contact-section .inputs .buttons .sent-btn {
+		display: inline-flex;
+		height: 56px;
+		padding: 14px 28px 15px 28px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 10px;
+		background: var(--Blue, #1458E4);
+		color: var(--White, #FFF);
+		text-align: center;
+		/* 1920/tag */
+		font-family: "PT Root UI";
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 20.4px */
+		letter-spacing: 0.34px;
+		text-transform: uppercase;
+		border: none;
+		transition: all 0.3s ease;
+	}
+
+	.contact-section .inputs .buttons .sent-btn:hover {
+		background: var(--Black, #151515);
+	}
+
+	@media screen and (max-width: 1281px) {
+		.contact-section .inputs .buttons .sent-btn {
+			padding: 15px 24px;
+			height: 52px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+		}
+	}
+
+	@media screen and (max-width: 769px) {
+		.contact-section .inputs .buttons .sent-btn {
+			width: 100%;
+			padding: 15px 28px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+			/* 19.2px */
+			letter-spacing: 0.32px;
+		}
+	}
+
+	.faqs-section {
+		margin-bottom: 120px;
+		position: relative;
+		z-index: 9;
+		background: var(--Gray3, #F2F2F2);
+		padding: 120px 0;
+	}
+
+	@media screen and (max-width: 1290px) {
+		.faqs-section {
+			padding: 90px 0;
+			margin-bottom: 120px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section {
+			margin-bottom: 60px;
+			padding: 60px 0;
+		}
+	}
+
+	.faqs-section .block {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.faqs-section .block {
+			margin: 0 auto;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.faqs-section .block {
+			width: 100%;
+		}
+
+		.faqs-section .block .accordion {
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .block {
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		.faqs-section .block .accordion {
+			width: 100%;
+		}
+	}
+
+	.faqs-section .accardions {
+		display: flex;
+		flex-direction: column;
+		gap: 320px;
+	}
+
+	@media screen and (max-width: 769px) {
+		.faqs-section .accardions {
+			gap: 40px;
+			width: 100%;
+		}
+	}
+
+	.faqs-section .accordion .accordion-button {
+		padding: 0;
+		padding-left: 12px;
+		padding-bottom: 20px;
+		align-items: start;
+		gap: 104px;
+		background: transparent;
+	}
+
+	@media screen and (max-width: 1280px) {
+		.faqs-section .accordion .accordion-button {
+			gap: 24px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion .accordion-button {
+			gap: 20px;
+			padding-right: 12px;
+		}
+	}
+
+	.faqs-section .accordion .accordion-button::after {
+		background-image: url(assets/imgs/button-plus.svg);
+		transition: all 0.3s ease;
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion .accordion-button::after {
+			margin-top: 3px;
+		}
+	}
+
+	.faqs-section .accordion .accordion-button:not(.collapsed)::after {
+		transform: rotate(45deg);
+	}
+
+	.faqs-section .accordion .accordion-button:not(.collapsed):hover::after {
+		transform: rotate(45deg);
+	}
+
+	@media screen and (min-width: 768px) {
+		.faqs-section .accordion .accordion-button:hover::after {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.faqs-section .accordion .accordion-button .titles {
+		display: flex;
+		gap: 24px;
+		align-items: start;
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion .accordion-button .titles {
+			gap: 8px;
+		}
+	}
+
+	.faqs-section .accordion .accordion-button .titles .effect {
+		color: var(--Black, #151515);
+		/* 1920/H4 */
+		font-family: "PT Root UI";
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		/* 31.2px */
+	}
+
+	@media screen and (max-width: 1280px) {
+		.faqs-section .accordion .accordion-button .titles .effect {
+			width: 502px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion .accordion-button .titles .effect {
+			width: 240px;
+			font-family: "PT Root UI";
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%;
+		}
+
+		.faqs-section .accordion .accordion-button .titles .effect br {
+			display: none;
+		}
+	}
+
+	.faqs-section .accordion .accordion-button:not(.collapsed) {
+		background: transparent;
+		color: #151515;
+		border: none;
+		box-shadow: none;
+	}
+
+	.faqs-section .accordion .accordion-button:focus {
+		box-shadow: none;
+	}
+
+	.faqs-section .accordion .accordion-item {
+		border-left: none;
+		border-right: none;
+		margin-bottom: 20px;
+		border-radius: 0;
+		transition: all 0.3s ease;
+		background: transparent;
+		border-top: 0;
+	}
+
+	.faqs-section .accordion .accordion-item:hover {
+		border-color: var(--Black, #151515);
+	}
+
+	.faqs-section .accordion .accordion-item.accordion-opened {
+		border-color: var(--Black, #151515);
+	}
+
+	.faqs-section .accordion .accordion-item:last-child {
+		margin-bottom: 0;
+	}
+
+	.faqs-section .accordion-body {
+		padding: 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion-body {
+			padding-top: 4px;
+			position: relative;
+			z-index: 9999;
+			margin-left: 12px;
+		}
+	}
+
+	.faqs-section .accordion-collapse {
+		margin-left: 12px;
+		width: 680px;
+		color: var(--Black, #151515);
+		/* 1920/text */
+		font-family: "PT Root UI";
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		/* 29.4px */
+		letter-spacing: -0.42px;
+		padding: 0;
+	}
+
+	@media screen and (max-width: 1280px) {
+		.faqs-section .accordion-collapse {
+			width: 502px;
+			font-size: 19px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			/* 26.6px */
+			letter-spacing: -0.38px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.faqs-section .accordion-collapse {
+			width: -moz-fit-content;
+			width: fit-content;
+			color: var(--Black, #151515);
+			/* 360/text sml */
+			font-family: "PT Root UI";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 130%;
+			/* 20.8px */
+			margin-left: 0;
+		}
+
+		.iti--fullscreen-popup.iti--container {
+			justify-content: end;
+			padding: 0;
+		}
+	}
+
+	/*# sourceMappingURL=contact.css.map */
+
+	/* Validatsiya uchun */
+	.contact-section .floating-block .error-text {
+		font-size: 13px;
+		color: #ff3b30;
+		margin-top: 6px;
+		scale: 0;
+		transition: all .3s ease;
+	}
+
+	.contact-section .floating-block.error input {
+		border-bottom: 1px solid #ff3b30 !important;
+	}
+
+	.contact-section .floating-block.error .error-text {
+		scale: 1;
+	}
+
+	.contact-section .floating-block.valid input {
+		border-bottom: 1px solid #009D73 !important;
+	}
+
+	/* intlTelInput uchun */
+	.contact-section .floating-block .iti {
+		display: block !important;
+	}
+
+	.contact-section .floating-block .iti__country-container {
+		left: unset;
+		right: 0;
+	}
+
+	.contact-section .floating-block .iti__arrow {
+		display: none;
+	}
+
+	.contact-section .floating-block .iti__country {
+		color: var(--Black, #151515);
+		font-family: "PT Root UI";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	.contact-section .floating-block .iti__search-icon {
+		left: unset;
+		right: 10px;
+	}
+
+	.contact-section .floating-block input {
+		padding-left: 0 !important;
+	}
+
+	.iti__search-input-wrapper {
+		display: none;
+	}
+
+	.iti__globe {
+		display: none;
+	}
+
+	.iti--inline-dropdown .iti__dropdown-content {
+		width: 360px !important;
+	}
+
+	.wrapper {
+		overflow: hidden !important;
+	}

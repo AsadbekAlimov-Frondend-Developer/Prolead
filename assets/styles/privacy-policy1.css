@@ -1,0 +1,9 @@
+	.ending-edited-text {
+		margin-top: 20px;
+	}
+
+	@media screen and (max-width: 769px) {
+		.ending-edited-text {
+			margin-top: 0;
+		}
+	}
